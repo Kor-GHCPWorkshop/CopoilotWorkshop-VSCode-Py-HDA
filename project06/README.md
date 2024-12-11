@@ -4,7 +4,7 @@
 - GitHub Copilot을 사용해 간단한 To-Do 리스트를 만들어 보는 예제입니다.
 
 ### 목표:
--
+- 
 
 ### Steps:
 - npx create-react-app mytodo-app
@@ -30,10 +30,7 @@
 - 항목을 삭제하는 버튼을 추가하도록 제안받아 봅니다.
 - Todo list를 테이블 형태로 저장하도록 제안받아 봅니다.
   - 테이블의 크기 위치 색상등을 조정하는 CSS를 제안받아 봅니다.
+  - 기타 원하는 CSS 수정을 제안받아 봅니다.
 
 ![Todo App example](TodoApp.png)
 
-### 추가실습:
-- @workspace /new
-  - 새로운 프로젝트를 생성하고, @workspace /new'를 사용해 새로운 프로젝트의 뼈대를 만듭니다.
-  - "@workspace /new  Expense Tracker 어플리케이션을 만들기 위한 모든 파일과 코드를 포함하는 workspace를 생성해줘"

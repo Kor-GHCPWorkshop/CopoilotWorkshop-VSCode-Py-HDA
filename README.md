@@ -14,6 +14,7 @@
   - Python: 3.x, VS Code의 Python language pack
   - Javascript, React
   - Kotlin (Project 7)
+  - Java (Project 3): JDK 21+, Gradle or Maven, VS Code의 Java language pack
 
 
 ## Project 1: 간단한 함수 및 테스트 코드 제안 받기
