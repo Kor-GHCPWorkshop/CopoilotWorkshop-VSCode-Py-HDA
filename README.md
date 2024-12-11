@@ -12,10 +12,10 @@
   ### 언어 및 빌드
   (* 실제 환경까지 모두 셋업이 어려운 경우, 사용법과 코드를 제안받는 것에 목적을 두고 실습)
   - Python: 3.x, VS Code의 Python language pack
-  - Javascript
-  - Java: JDK 21+, Gradle or Maven, VS Code의 Java language pack
+  - Javascript, React
+  - Kotlin (Project 7)
 
---
+
 ## Project 1: 간단한 함수 및 테스트 코드 제안 받기
  - GitHub Copilot를 활용하여 간단한 함수와 테스트 코드를 제안받는 실습입니다. 이를 통해 기본적인 Copilot의 기능을 활용하는 방법을 익힙니다. 
 
