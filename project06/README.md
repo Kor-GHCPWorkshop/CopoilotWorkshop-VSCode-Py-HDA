@@ -4,7 +4,7 @@
 - GitHub Copilot을 사용해 간단한 To-Do 리스트를 만들어 보는 예제입니다.
 
 ### 목표:
-- 
+- 간단한 프론트 앱을 GitHub Copilot을 사용해 만들어 봅니다.
 
 ### Steps:
 - npx create-react-app mytodo-app
