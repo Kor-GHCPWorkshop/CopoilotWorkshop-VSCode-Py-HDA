@@ -34,3 +34,6 @@
 
 ![Todo App example](TodoApp.png)
 
+### 추가 학습:
+- 만들어진 React 앱을 Azure Kubernetes Service(AKS)에 배포하는 GitHub Actions 워크플로우를 Copilot에게 제안받아 봅니다.
+
