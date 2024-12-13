@@ -40,7 +40,7 @@
   - 웹앱을 Azure Kubernetes로 배포하는 GitHub Actions 워크플로우를 제안받아 봅니다.
 
 ## Project 7: 안드로이드 앱 개발
-  - Android 스튜디오를 이용하여 간단한 사진 앱을 만들어보세요.
+  - Android 스튜디오를 이용하여 간단한 퀴즈 앱을 만들어보세요.
 
 ## Project 8: CI/CD 파이프라인 실습 
   - 주어진 파이프라인에 대한 설명과 변환등을 GitHub Copilot을 사용하여 실습하는 예제입니다.
