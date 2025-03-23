@@ -16,33 +16,35 @@
 
 ## GitHub Copilot의 기본
 
-## Project 1: 간단한 함수 및 테스트 코드 제안 받기 (코드완성)
+## Task 1: 간단한 함수 및 테스트 코드 제안 받기 (코드완성)
  - GitHub Copilot를 활용하여 간단한 함수와 테스트 코드를 제안받는 실습입니다. 이를 통해 기본적인 Copilot의 기능을 활용하는 방법을 익힙니다. 
+ - GitHub Copilot Log를 확인하여, 오픈소스와 매치되는 코드인 경우 레퍼런스 정보를 확인합니다. 
  - VS Code의 Copilot 메뉴에 관한 기본적인 설정들을 변경해 봅니다. 
 
-## Project 2: 가위, 바위, 보 게임 만들기
+## Task 2: 가위, 바위, 보 게임 만들기 (Copilot Chat사용용)
  - GitHub Copilot과 함께 가위, 바위, 보 게임을 만들어 봅니다.
  - 추가적인 스팍, 도마뱁을 가위, 바위, 보 게임에 추가해 봅니다. 
+ - Copilot을 통해 테스트 코드를 작성해 봅니다.
+ - Copilot chat의 각종 메뉴들을 사용해 봅니다.
+ - Copilot Code Review를 통해, 코드에 대한 리뷰를 받아 봅니다.
+ - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
 
-## Project 3: 코드 내 문제점을 찾고 해결 방법 제안 받기
-  - 코드에서 Copilot을 이용하여 보안 문제점을 찾고 해결 방법을 제안 받아 봅니다. 
-
-## Project 4: 코드 리팩토링
-  - 코드 블럭을 Copilot을 활용하여 리팩토링 해 보는 예제 입니다.
-  
-## Project 5: 추가적인 context 제공 (VS Code, VS의 경우)
-  - @workspace, #등을 사용하여 프로젝트 전체, 특정 파일등에 대한 추가적인 문맥을 제공하는 예제입니다.
-
-## Project 6: React를 이용한 간단한 웹앱 만들기
-  - React를 이용하여 간단한 웹앱을 만들어 봅니다.
+## Task 3: Django 웹앱 만들기 & Copilot에게 Custom instruction 제공하기
+  - Copilot Edit을 활용해 Django를 이용하여 간단한 웹앱을 만들어 봅니다.
+  - Copilot에게 Custom instruction을 제공하여, 원하는 형태로 코드 제안을 받아 봅니다.
   - 웹앱에 대한 다양한 CSS 스타일을 제안받아 봅니다.
-  - 웹앱에 대한 테스트 코드를 작성해보세요.
+  - 웹앱에 대한 테스트 코드를 작성해 봅니다. 
   - 웹앱을 Azure Kubernetes로 배포하는 GitHub Actions 워크플로우를 제안받아 봅니다.
 
-## Project 7: 안드로이드 앱 개발
-  - Android 스튜디오를 이용하여 간단한 퀴즈 앱을 만들어보세요.
+## Task 4: 코드 내 문제점을 찾고 해결 방법 제안 받기 (추가 컨텍스트 제공공)
+  - 코드에서 Copilot을 트러블 슈팅이나 보안 문제점 해결에 이용해 봅니다.  
+  - @workspace, #file, #selection, #terminalSelection등 다양한 방법으로 추가적인 문맥정보를 제공하는 방법을 실습합니다. 
 
-## Project 8: CI/CD 파이프라인 실습 
+## Task 5: 코드 리팩토링
+  - 코드 블럭을 Copilot을 활용하여 리팩토링 해 보는 예제 입니다.
+  
+
+## Task 9: CI/CD 파이프라인 실습 
   - 주어진 파이프라인에 대한 설명과 변환등을 GitHub Copilot을 사용하여 실습하는 예제입니다.
 
 
