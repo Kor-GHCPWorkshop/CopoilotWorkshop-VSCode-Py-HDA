@@ -5,20 +5,20 @@
 
 ## 실습 환경
 - VS Code 또는 Codespaces를 활용합니다.
-- 실습 7의 경우 Android studio를 활용
-- 다른 IDE도구 (IntelliJ IDEA, Android Studio등)에서, VS Code와 기능적인 차이가 있을 수 있어, 지원되지 않는 실습예가 있을 수 있습니다.
-- GitHub Copilot 플러그인을 설치하고, GitHub Copilot 라이센스가 있는 계정으로 로그인하여 사용할 수 있는 상태여야 합니다.
+  * 다른 IDE도구 (IntelliJ IDEA, Android Studio등)에서, VS Code와 기능적인 차이가 있을 수 있어, 지원되지 않는 실습예가 있을 수 있습니다.
+- GitHub Copilot 플러그인을 설치하고, GitHub Copilot Business 라이센스가 있는 계정으로 로그인하여 사용할 수 있는 상태여야 합니다.
+- VS Code 및 GitHub Copilot 플러그인은 **최신 버전으로 업데이트 되어 있어야 합니다.**
 
   ### 언어 및 빌드
   (* 실제 환경까지 모두 셋업이 어려운 경우, 사용법과 코드를 제안받는 것에 목적을 두고 실습)
   - Python: 3.x, VS Code의 Python language pack
   - Javascript, React
-  - Kotlin (Project 7)
-  - Java (Project 3): JDK 21+, Gradle or Maven, VS Code의 Java language pack
 
+## GitHub Copilot의 기본
 
-## Project 1: 간단한 함수 및 테스트 코드 제안 받기
+## Project 1: 간단한 함수 및 테스트 코드 제안 받기 (코드완성)
  - GitHub Copilot를 활용하여 간단한 함수와 테스트 코드를 제안받는 실습입니다. 이를 통해 기본적인 Copilot의 기능을 활용하는 방법을 익힙니다. 
+ - VS Code의 Copilot 메뉴에 관한 기본적인 설정들을 변경해 봅니다. 
 
 ## Project 2: 가위, 바위, 보 게임 만들기
  - GitHub Copilot과 함께 가위, 바위, 보 게임을 만들어 봅니다.
