@@ -1,4 +1,4 @@
-# Project 2: 가위, 바위, 보 게임 만들기
+# Task 2: 가위, 바위, 보 게임 만들기 (Copilot Chat사용)
 
 ### Use case: 
 - GitHub Copilot를 활용하여 가위, 바위, 보 게임을 만들고, 기본 게임에 추가적인 게임 로직을 추가하는 실습을 통해, Copilot의 활용도를 높입니다.

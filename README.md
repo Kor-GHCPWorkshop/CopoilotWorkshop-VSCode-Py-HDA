@@ -21,15 +21,16 @@
  - GitHub Copilot Log를 확인하여, 오픈소스와 매치되는 코드인 경우 레퍼런스 정보를 확인합니다. 
  - VS Code의 Copilot 메뉴에 관한 기본적인 설정들을 변경해 봅니다. 
 
-## Task 2: 가위, 바위, 보 게임 만들기 (Copilot Chat사용용)
+## Task 2: 가위, 바위, 보 게임 만들기 (Copilot Chat사용)
  - GitHub Copilot과 함께 가위, 바위, 보 게임을 만들어 봅니다.
  - 추가적인 스팍, 도마뱁을 가위, 바위, 보 게임에 추가해 봅니다. 
  - Copilot을 통해 테스트 코드를 작성해 봅니다.
  - Copilot chat의 각종 메뉴들을 사용해 봅니다.
  - Copilot Code Review를 통해, 코드에 대한 리뷰를 받아 봅니다.
  - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
+ - 이미지를 Copilot Chat에 컨텍스트로 제공하고, 이미지를 통해 코드를 제안받아 봅니다. (Vision)
 
-## Task 3: Django 웹앱 만들기 & Copilot에게 Custom instruction 제공하기
+## Task 3: Django 웹앱 만들기 & Copilot에게 Custom instruction 제공하기 (Copilot Edit 사용)
   - Copilot Edit을 활용해 Django를 이용하여 간단한 웹앱을 만들어 봅니다.
   - Copilot에게 Custom instruction을 제공하여, 원하는 형태로 코드 제안을 받아 봅니다.
   - 웹앱에 대한 다양한 CSS 스타일을 제안받아 봅니다.

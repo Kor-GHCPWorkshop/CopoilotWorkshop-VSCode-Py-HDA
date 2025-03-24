@@ -1,16 +1,27 @@
-# Project 3: 코드 내 문제점을 찾고 해결 방법 제안 받기
+# Task 3: Django 웹앱 만들기 & Copilot에게 Custom instruction 제공하기 (Copilot Edit 사용)
 
 ### Use case: 
-- GitHub Copilot를 활용하여 코드 내 관련 문제점을 찾고, 해결 방법을 제안 받습니다.
+- Copilot Edit기능을 사용해 를 활용하여 Django 기반의 메모앱을 빌드하면서, Copilot에게 Custom instruction을 제공하여 원하는 형태로 코드 제안을 받습니다.
 
 ### 목표:
-- GitHub Copilot Chat을 활용해 문제점을 찾고, 해결 방법을 제안 받는 실습을 통해 추가적인 GitHub Copilot 기능을 익힙니다.
+- 실제 Django 웹앱을 빌드하면서 GitHub Copilot의 다양한 기능을 활용하는 방법을 익힙니다.
+- Copilot Edit 기능을 사용해 어떤 기능인지 익힙니다. 
+- 기본 GPT-4o 모델 외에, 다른 모델을 활용해 봅니다. 
+- Copilot에게 Custom instruction을 제공하여 원하는 형태로 코드 제안을 받는 방법을 익힙니다.
 
-### Steps:
-- [vulnerableserver.js](./vulnerableserver.js) 파일의 코드 블럭을 선택하고, 해당 블럭에 대한 보안 문제점을 Copilot Chat에게 질문합니다.
-- [TicTacToe.java](./TicTacToe.java) 틱택토 게임 코드에 문제점이 있는지 찾고, 해결 방법을 Copilot Chat에게 요청합니다.
-  - Unit test를 작성해, 게임이 정상적으로 작동하는지 확인합니다. 
-  - Copilot을 활용해 문서를 작성합니다. (generate docs)
+### Steps1: Custom instructions 생성
+- 프로젝트에 `/docs` 디렉토리를 생성합니다. 
+- 예제로 주어진 /docs 디렉토리의 파일들을 복사하여 붙여 넣습니다. 
+
+### Steps2: Django 웹앱 만들기
+- Copilot Edit 메뉴로 이동합니다. 
+  <img src="01.png" width="300">
+
+- Django 프로젝트를 생성합니다. 
+- 필요한 패키지를 설치합니다. 
+- 기본 앱을 생성합니다. 
+- Django 모델을 정의합니다.
+- 마이그레이션을 실행합니다.
+- Django 서버를 시작합니다.
 
 ### Tips:
-"코드에서 개선할 점 있으면 제안해 줘" 등의 질문
