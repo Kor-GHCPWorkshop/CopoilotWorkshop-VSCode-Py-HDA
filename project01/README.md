@@ -10,59 +10,58 @@
 - VS Code의 Copilot 메뉴에 관한 기본적인 설정들을 변경해 봅니다.
 
 ### Step1 : 기본 함수 작성
-- VS Code를 열고, 새로운 파일을 생성합니다. (factorial.py)
-  <img src = "01.png" width = "300">
+- VS Code를 열고, 새로운 파일을 생성합니다. (factorial.py)<br>
+  <img src = "img/01.png" width = "400">
 
-- 아래의 주석을 입력 합니다.
-  `# 팩토리얼 함수 `
-  <img src = "02.png" width = "300">
+- 아래의 주석을 입력 합니다.<br>
+  `# 팩토리얼 함수 `<br>
+  <img src = "img/02.png" width = "400">
 
-- 회색으로 제안된 코드를 확인하고, Tab키를 눌러서 코드를 완성합니다. 
-   <img src = "03.png" width = "300">
+- 회색으로 제안된 코드를 확인하고, Tab키를 눌러서 코드를 완성합니다.<br>
+   <img src = "img/03.png" width = "400">
 
-- 제안된 코드 위에 마우스를 올려 가능한 옵션을 확인합니다. 
-    <img src = "04.png" width = "300">
+- 제안된 코드 위에 마우스를 올려 가능한 옵션을 확인합니다.<br>
+    <img src = "img/04.png" width = "400">
 
-- 두번째로 아래 주석을 입력합니다.
-  `# 소수 판별 함수`
+- 두번째로 아래 주석을 입력합니다.<br>
+  `# 소수 판별 함수`<br>
 
-- 회색으로 제안된 상태에서, (코드를 수락하지 않은 상태에서) Ctrl + Enter를 눌러서 제안되는 리스트를 확인합니다.
-  <img src = "05.png" width = "400">
+- 회색으로 제안된 상태에서, (코드를 수락하지 않은 상태에서) Ctrl + Enter를 눌러서 제안되는 리스트를 확인합니다.<br>
+  <img src = "img/05.png" width = "500">
 
-- 명령줄에서 `OUTPUT` 탭에서 `GitHub Copilot Log`를 선택하여 오픈소스의 레퍼런스 정보를 확인합니다. 
-  <img src = "15.png" width = "400">
+- 명령줄에서 `OUTPUT` 탭에서 `GitHub Copilot Log`를 선택하여 오픈소스의 레퍼런스 정보를 확인합니다.<br>
+  <img src = "img/15.png" width = "400">
 
 ### Step2 : 오른 마우스 Copilot 메뉴 사용하기
-- 마우스 오른 버튼을 클릭하여, 'Copilot' 메뉴의 'generate_test'를 선택합니다.
-    <img src = "06.png" width = "400">
+- 마우스 오른 버튼을 클릭하여, 'Copilot' 메뉴의 'generate_test'를 선택합니다.<br>
+    <img src = "img/06.png" width = "500">
 
-- 마우스 오른 버튼을 클릭하여 'Copilot' 메뉴의 'generate_docs'를 선택합니다.
-    <img src = "07.png" width = "400"> 
-    <img src = "08.png" width = "400">
+- 마우스 오른 버튼을 클릭하여 'Copilot' 메뉴의 'generate_docs'를 선택합니다.<br>
+    <img src = "img/07.png" width = "500"> 
+    <img src = "img/08.png" width = "500">
 
 
 
 ### HINT:
-![image](factorial.jpg)
+![image](img/factorial.jpg)
 
 
 ### Step3 : VS Code의 Copilot 설정 메뉴
-- VS Code에서 Ctrl + Shift + P를 눌러 명령 팔레트를 열고, 'preference'을 검색하여, `Preference: Open Settings (UI)`를 선택합니다.
-    <img src = "09.png" width = "400">
-- Copilot locale을 검색하고, 'ko'로 변경합니다. 
-    <img src = "10.png" width = "400">
+- VS Code에서 Ctrl + Shift + P를 눌러 명령 팔레트를 열고, 'preference'을 검색하여, `Preference: Open Settings (UI)`를 선택합니다.<br>
+    <img src = "img/09.png" width = "500">
+- Copilot locale을 검색하고, 'ko'로 변경합니다.<br>
+    <img src = "img/10.png" width = "500">
 
-- Code완성 기능의 기본 모델을 변경해 봅니다. 
-  - 상단의 Copilot 아이콘을 클릭하고, `Configure Code completion`을 선택합니다.
-    <img src = "11.png" width = "400">
-  - 'Change completion model'을 선택합니다.
-    <img src = "12.png" width = "400">
-  - 모델을 변경합니다. 
-    <img src = "13.png" width = "400">
+- Code완성 기능의 기본 모델을 변경해 봅니다.<br>
+  - 상단의 Copilot 아이콘을 클릭하고, `Configure Code completion`을 선택합니다.<br>
+    <img src = "img/11.png" width = "400">
+  - 'Change completion model'을 선택합니다.<br>
+    <img src = "img/12.png" width = "400">
+  - 모델을 변경합니다.<br>
+    <img src = "img/13.png" width = "400">
 
-- Experimental 기능인 `NES(Next Edit Suggestion)`을 활성화/비활성화 해봅니다.
-    <img src = "14.png" width = "400">
+- Experimental 기능인 `NES(Next Edit Suggestion)`을 활성화/비활성화 해봅니다.<br>
+    <img src = "img/14.png" width = "400">
 
 - Reference : [VS Code Copilot settings reference 문서](https://code.visualstudio.com/docs/copilot/copilot-settings)
 
-    

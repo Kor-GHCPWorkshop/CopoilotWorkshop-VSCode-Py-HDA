@@ -11,7 +11,35 @@
 
 ### Steps1: Custom instructions 생성
 - 프로젝트에 `/docs` 디렉토리를 생성합니다. 
-- 예제로 주어진 /docs 디렉토리의 파일들을 복사하여 붙여 넣습니다. 
+- 예제로 주어진 /docs 디렉토리의 파일들을 복사하여, 실습중인 프로젝트에에 붙여 넣습니다. 
+  <img src="02.png" width="300">
+- 붙여넣어진 파일들의 내용을 확인하고, 별도로 원하는 내용이 있을 경우 수정해 봅니다. 
+
+- Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Preference: Open Workspace Settings (JSON)`을 선택합니다.
+  <img src="03.png" width="300">
+
+- settings.json 파일에 "github.copilot.chat.codeGeneration.instructions"을 추가합니다.
+  <img src="04.png" width="300">
+```json
+{
+  "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "file": "docs/spec.md"
+        },
+        {
+            "file": "docs/python-style.md"
+        },
+        {
+            "file": "docs/database-style.md"
+        },
+        {
+            "file": "docs/test-style.md"
+        }
+    ]
+}
+```
+- Copilot Chat에 `이 프로젝틀 구성하려면 어떻게 해야하는지 알려줘` 라고 질문한뒤, custom instructions의 파일들이 참조로 추가되는지 확인한다. 
+
 
 ### Steps2: Django 웹앱 만들기
 - Copilot Edit 메뉴로 이동합니다. 
