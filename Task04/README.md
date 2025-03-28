@@ -30,7 +30,7 @@
 
 - 모델 정의 후, Copilot이 제안해 준, 이어지는 과정을 진행하기 위해 별도 CLI터미널을 실행합니다. <br>
     <img src="img/09.png" width="500"> <br>
-    <img src="img/10.png" width="500">
+    <img src="img/10.png" width="300">
 
 - venv를 실행합니다. <br>
     <img src="img/11.png" width="400">
@@ -49,30 +49,30 @@
 
 ## Step 2: 슈퍼 유저 생성하기
 - CLI 터미널에서 Ctrl + i를 입력하고, Copilot 창에에 `superuser를 생성` 라고 입력합니다. 
-  <img src="img/24.png" width="300">
-  <img src="img/25.png" width="400">
+  <img src="img/24.png" width="400">
+  <img src="img/25.png" width="500">
    - `Insert into terminal` 혹은 `copy` 버튼을 활용합니다. 
 
 - `python manage.py createsuperuser` 명령어를 통해해 슈퍼 유저를 생성합니다. <br>
-  <img src="img/26.png" width="300">
+  <img src="img/26.png" width="500">
 
 
 ## Step 3: Memos 모델 생성
 - 개발 서버는 계속 실행 중인 상태에서 진행합니다. <br>
 
 - `memos/models.py` 파일을 열고, Copilot chat에 요청하여 모델을 정의 합니다. <br>
-    <img src="img/05.png" width="200">
-    <img src="img/06.png" width="400">
+    <img src="img/05.png" width="400"> <br>
+    <img src="img/06.png" width="400"> 
     <img src="img/08.png" width="300">
 
 - `python manage.py makemigrations` 명령어를 실행합니다. <br>
-    <img src="img/12.png" width="400">
+    <img src="img/12.png" width="600">
     
 - `python manage.py migrate` 명령어를 실행합니다. <br>
-    <img src="img/14.png" width="200">
+    <img src="img/14.png" width="500">
 
 - 관리자 페이지에 모델을 등록하기 위해 `memos`디렉토리의 `admin.py` 파일을 열고, 모델을 등록합니다. <br>
-  <img src="img/15.png" width="300">
+  <img src="img/15.png" width="200">
 
 - localhost:8000/admin/으로 접속하여, 관리자 계정으로 로그인합니다. <br>
     <img src="img/16.png" width="300">
@@ -80,7 +80,7 @@
 - 등록된 모델을 확인합니다. <br>
     <img src="img/17.png" width="300">
 
-- Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>
+- `Ctrl + Shift + P`를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>
 
 
 ## Step 4 : 이후 과정 질문하기
@@ -138,14 +138,14 @@
     <img src="img/41.png" width="500">
 
 - CLI터미널에서 `Ctrl + i`를 입력하고, Copilot 창에 '`django bootstrap 5 설치`' 명령어를 요구합니다. <br>
-    <img src="img/44.png" width="400">
-    <img src="img/45.png" width="400">
+    <img src="img/44.png" width="600"> <br>
+    <img src="img/45.png" width="500">
 
     - run을 실행하여 bootstrap 5를 설치하고, settings.py에 내용을 추가합니다 . <br>
-    <img src="img/46.png" width="400">
+    <img src="img/46.png" width="300">
 
 - 터미널에서 python manage.py migrate 명령어를 실행합니다. <br>
-    <img src="img/47.png" width="400">
+    <img src="img/47.png" width="600">
     - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br>
 
 - localhost:8000 으로 접속하여 프로젝트를 확인합니다. <br>
