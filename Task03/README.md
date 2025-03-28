@@ -62,47 +62,47 @@
 
 ### Step 3: Django 웹앱 생성 시작
 
-- 가상 환경 생성 및 활성화
+- 가상 환경 생성 및 활성화 <br>
   <img src="img/09.png" width="400">
 
-- 필요한 패키지 설치
+- 필요한 패키지 설치 <br>
   <img src="img/10.png" width="400">
   <img src="img/11.png" width="400">
   <img src="img/12.png" width="200">
 
-- Django 프로젝트 생성
-  **아래 명령어의 마지막에 '.'을 빼먹으면면 앱을 배포할 때 설정문제가 발생할 수 있으니 주의합니다.**
+- Django 프로젝트 생성 <br>
+  **아래 명령어의 마지막에 '.'을 빼먹으면면 앱을 배포할 때 설정문제가 발생할 수 있으니 주의합니다.** <br>
   <img src="img/13.png" width="200">
   <img src="img/14.png" width="300">
 
 - Chat에서 `#folder`를 선택하고, 위에서 생성된 /memojjang 디렉토리를 선택하여, `디렉토리의 파일들에 대해 설명해줘` 라고 질문합니다. <br>
   <img src="img/15.png" width="400">
-  <img src="img/16.png" width="400">
-  <img src="img/17.png" width="400">
+  <img src="img/16.png" width="200">
+  <img src="img/17.png" width="500">
 
 ### Step 4: Django 웹 생성
 
 - memojjang 디렉토리로 이동합니다. <br>
-  <img src="img/18.png" width="200">
+  <img src="img/18.png" width="300">
 - apps 디렉토리를 생성하고, 이 디렉토리에 각각 users와 memos 앱을 생성합니다. <br>
-  <img src="img/19.png" width="400">
+  <img src="img/19.png" width="500">
 
 ### Step 5: Django 프로젝트 구조 생성
 
 - 다시 상위 디렉토리로 이동합니다 . <br>
-  <img src="img/20.png" width="200">
+  <img src="img/20.png" width="300">
 
 - 템플릿을 생성합니다. <br>
    - 혹시 윈도우 환경을 사용하신다면 주어진 예제 명령어에서 에러가 발생합니다. 
-   - 이경우, 아래 화면 캡쳐와 같이, 명령어 창에서 Ctrl + i 를 눌러, Copilot 팝업창을 실행하고 `mkdir templates static db 명령을 윈도우 파워셀 형태로 바꿔줘` 와 같이 요청합니다. 
-  <img src="img/21.png" width="400">
-   - 생성된 디렉토리를 확인합니다. 
-  <img src="img/22.png" width="400">
+   - 이경우, 아래 화면 캡쳐와 같이, 명령어 창에서 `Ctrl + i` 를 눌러, Copilot 팝업창을 실행하고 `mkdir templates static db 명령을 윈도우 파워셀 형태로 바꿔줘` 와 같이 요청합니다. <br>
+    <img src="img/21.png" width="400"> <br>
+   - 생성된 디렉토리를 확인합니다. <b>
+    <img src="img/22.png" width="400">
 
 - `mkdir templates\users; mkdir templates\memos` 명령으로 templates 디렉토리 안에 users와 memos 디렉토리를 생성합니다. <br>
   
-- mkdir static\css; mkdir static\js 명령으로 static 디렉토리 안에 css와 js 디렉토리를 생성합니다. <br>
-  <img src="img/23.png" width="400">
+- `mkdir static\css; mkdir static\js` 명령으로 static 디렉토리 안에 css와 js 디렉토리를 생성합니다. <br>
+  <img src="img/23.png" width="500">
 
 ### Step 6: settings.py 수정하기
 - settings.py 파일을 열고, 아래 내용을 추가 합니다. <br>
@@ -117,9 +117,9 @@
 - manage.py 파일이 있는 상위 디렉토리로 이동합니다. <br>
 - `python manage.py makemigrations` 명령어를 입력하여 마이그레이션을 생성합니다. <br>
 - `python manage.py migrate` 명령어를 입력하여 마이그레이션을 적용합니다. <br>
-  <img src="img/26.png" width="200">
+  <img src="img/26.png" width="400">
 - db.sqlite3 파일이 생성됨을 확인합니다. <br>
-  <img src="img/27.png" width="300">
+  <img src="img/27.png" width="200">
 
 
 ### Step 8: 저장
