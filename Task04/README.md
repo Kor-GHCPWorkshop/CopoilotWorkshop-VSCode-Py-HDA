@@ -16,7 +16,7 @@
   <img src="img/01.png" width="500"> 
   - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br> 
     <img src="img/02.png" width="500">
-    <img src="img/03.png" width="400">
+    <img src="img/03.png" width="400"> <br>
     <img src="img/04.png" width="500">
 
 - `users/models.py` 파일을 열고, Copilot chat에 요청하여 모델을 정의 합니다. <br>
@@ -29,14 +29,13 @@
     <img src="img/20.png" width="300">
 
 - 모델 정의 후, Copilot이 제안해 준, 이어지는 과정을 진행하기 위해 별도 CLI터미널을 실행합니다. <br>
-    <img src="img/09.png" width="500"> <br>
-    <img src="img/10.png" width="300">
+    <img src="img/10.png" width="200">
 
 - venv를 실행합니다. <br>
-    <img src="img/11.png" width="400">
+    <img src="img/11.png" width="600">
 
 - `python manage.py makemigrations users` 명령어를 실행합니다. <br>
-    <img src="img/21.png" width="500">
+    <img src="img/21.png" width="700">
 
 - `python manage.py migrate` 명령어를 실행합니다. <br>
     <img src="img/22.png" width="500">
@@ -49,7 +48,7 @@
 
 ## Step 2: 슈퍼 유저 생성하기
 - CLI 터미널에서 Ctrl + i를 입력하고, Copilot 창에에 `superuser를 생성` 라고 입력합니다. 
-  <img src="img/24.png" width="400">
+  <img src="img/24.png" width="700">
   <img src="img/25.png" width="500">
    - `Insert into terminal` 혹은 `copy` 버튼을 활용합니다. 
 
@@ -72,7 +71,8 @@
     <img src="img/14.png" width="500">
 
 - 관리자 페이지에 모델을 등록하기 위해 `memos`디렉토리의 `admin.py` 파일을 열고, 모델을 등록합니다. <br>
-  <img src="img/15.png" width="200">
+  <img src="img/15.png" width="100"> 
+      <img src="img/09.png" width="500"> 
 
 - localhost:8000/admin/으로 접속하여, 관리자 계정으로 로그인합니다. <br>
     <img src="img/16.png" width="300">
