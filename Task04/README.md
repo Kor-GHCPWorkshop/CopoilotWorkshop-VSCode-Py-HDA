@@ -89,7 +89,7 @@
     <img src="img/27.png" width="500">
     <img src="img/28.png" width="400">
 
-### Step 5: Prompt파일 생성 - Copilot Edit을 통해 뷰, 템플릿, URL동시에 생성하기
+### Step 5: Prompt파일 생성 - Copilot Edit을 통해 URL 패턴, 뷰, 템플릿 동시에 생성하기
 
 - **[Prompt 파일 이란?](https://code.visualstudio.com/docs/copilot/copilot-customization#_reusable-prompt-files-experimental)**
   - Prompt 파일은 재사용 가능한 프롬프트 지시문을 Markdown 형식으로 저장해, Copilot에 손쉽게 추가 맥락을 제공할 수 있도록 도와줍니다. 예컨대 특정 아키텍처 요건, 코드 스타일 등을 이 파일에 정리해두면, 반복적인 지시사항 없이도 채팅 창에서 손쉽게 불러와 의도된 코드를 빠르게 생성할 수 있습니다.
@@ -99,8 +99,60 @@
     - 팀 협업(Team collaboration): 문서나 사양을 참조해 패턴과 가이드라인을 기록.
     - 온보딩(Onboarding): 복잡한 프로세스나 프로젝트별 패턴을 단계별로 안내하는 가이드를 생성.
 
-- 템플릿에 대한 Prompt 파일을 생성합니다. <br>
-  
-    <img src="img/29.png" width="400">
+- VS Code의 설정에서 Prompt Files 부분을 확인합니다. <br>
+    <img src="img/29.png" width="500">
 
-- 
+- default 위치인 .github/prompts 디렉토리를 생성합니다. <br>
+    <img src="img/30.png" width="300">
+
+- 위 디렉토리내에 template.prompt.md 파일을 생성하고, 예시로 주어진 `promptExample/` 디렉토리의 `template.prompt.md` 파일의 내용을 붙여 넣습니다다. <br>
+    <img src="img/31.png" width="300">
+
+
+- Copilot Edit으로 이동합니다. <br>
+    <img src="img/32.png" width="300">
+- 하단에 채팅창에서 클립 모양의 아이콘 'Add Files..'을 클릭합니다. <br>
+    <img src="img/33.png" width="300">
+- Prompt를 선택합니다. <br>
+    <img src="img/34.png" width="500">
+- `template.prompt.md` 파일을 선택합니다. <br>
+    <img src="img/35.png" width="500"> 
+- template 프롬프트가 선택된 것을 확인합니다. <br>
+    <img src="img/36.png" width="400">
+- 다시 클립 모양 아이콘을 클릭하고 Folder를 선택합니다. <br>
+    <img src="img/42.png" width="400">
+
+- Chat에 아래와 같이 입력합니다. <br> 
+   - `이 프로젝트를 완성하기 위해, URL패턴, 뷰, 템플릿을 구성해줘`
+    <img src="img/43.png" width="500">    
+
+- Copilot Edit이 파일들을 완성합니다. <br>
+    <img src="img/38.png" width="600">
+
+- **Keep**을 클릭하여 생성된 내용을 유지합니다. <br>
+
+- 추가로 필요한 내용들을 요청하여 구성합니다. <br>
+    <img src="img/39.png" width="400">
+- 생성된 파일들을 확인하고, Keep 하여 유지합니다. 그리고 파일들을 저장합니다. <br>
+    <img src="img/40.png" width="600">
+    <img src="img/41.png" width="500">
+
+- CLI터미널에서 `Ctrl + i`를 입력하고, Copilot 창에 '`django bootstrap 5 설치`' 명령어를 요구합니다. <br>
+    <img src="img/44.png" width="400">
+    <img src="img/45.png" width="400">
+
+    - run을 실행하여 bootstrap 5를 설치하고, settings.py에 내용을 추가합니다 . <br>
+    <img src="img/46.png" width="400">
+
+- 터미널에서 python manage.py migrate 명령어를 실행합니다. <br>
+    <img src="img/47.png" width="400">
+    - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br>
+
+- localhost:8000 으로 접속하여 프로젝트를 확인합니다. <br>
+    <img src="img/48.png" width="700">
+
+### 지식 확인
+- 다양한 컨텍스트 추가 방법 
+- CLI 명령어 창에서 Copilot을 활용
+- Copilot Edit의 동작 방식식
+- prompt 파일 

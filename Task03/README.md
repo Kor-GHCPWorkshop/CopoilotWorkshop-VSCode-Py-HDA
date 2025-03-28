@@ -90,14 +90,14 @@
 ### Step 5: Django 프로젝트 구조 생성
 
 - 다시 상위 디렉토리로 이동합니다 . <br>
-  <img src="img/20.png" width="300">
+  <img src="img/20.png" width="400">
 
 - 템플릿을 생성합니다. <br>
    - 혹시 윈도우 환경을 사용하신다면 주어진 예제 명령어에서 에러가 발생합니다. 
    - 이경우, 아래 화면 캡쳐와 같이, 명령어 창에서 `Ctrl + i` 를 눌러, Copilot 팝업창을 실행하고 `mkdir templates static db 명령을 윈도우 파워셀 형태로 바꿔줘` 와 같이 요청합니다. <br>
-    <img src="img/21.png" width="400"> <br>
+    <img src="img/21.png" width="500"> <br>
    - 생성된 디렉토리를 확인합니다. <b>
-    <img src="img/22.png" width="400">
+    <img src="img/22.png" width="500">
 
 - `mkdir templates\users; mkdir templates\memos` 명령으로 templates 디렉토리 안에 users와 memos 디렉토리를 생성합니다. <br>
   
