@@ -1,15 +1,15 @@
 # Task 3: Django 웹앱 만들기 (Part 1) 
 
-### Use case: 
+## Use case: 
 - Copilot에게 Custom instruction을 제공하여 원하는 형태로 코드 제안을 받습니다.
 
-### 목표:
+## 목표:
 - 실제 Django 웹앱을 빌드하면서 GitHub Copilot의 다양한 기능을 활용하는 방법을 익힙니다.
 - 기본 GPT-4o 모델 외에, 다른 모델을 활용해 봅니다. 
 - Copilot에게 Custom instruction을 제공하여 원하는 형태로 코드 제안을 받는 방법을 익힙니다.
 
 
-### Step 1: Custom instructions 생성
+## Step 1: Custom instructions 생성
  - **[Custom instructions란](https://code.visualstudio.com/docs/copilot/copilot-customization)** 
     - Copilot에게 특정한 컨텍스트를 제공하여, 원하는 형태로 코드 제안을 받는 방법입니다. 
     - 예를 들어, 특정한 스타일의 코드를 제안받고 싶거나, 특정한 언어로 코드를 제안받고 싶을 때 사용합니다. 
@@ -47,7 +47,7 @@
    <img src="img/04.png" width="400">
 
 
-### Step 2: Django 프로젝트 생성 방법 확인
+## Step 2: Django 프로젝트 생성 방법 확인
 
 - 모델을 변경합니다. Claude 3.5 Sonnet(Preview) 모델을 선택합니다. <br>
   <img src="img/05.png" width="300">
@@ -60,7 +60,7 @@
   <img src="img/08.png" width="400">
 
 
-### Step 3: Django 웹앱 생성 시작
+## Step 3: Django 웹앱 생성 시작
 
 - 가상 환경 생성 및 활성화 <br>
   <img src="img/09.png" width="400">
@@ -80,14 +80,14 @@
   <img src="img/16.png" width="200">
   <img src="img/17.png" width="500">
 
-### Step 4: Django 웹 생성
+## Step 4: Django 웹 생성
 
 - memojjang 디렉토리로 이동합니다. <br>
   <img src="img/18.png" width="300">
 - apps 디렉토리를 생성하고, 이 디렉토리에 각각 users와 memos 앱을 생성합니다. <br>
   <img src="img/19.png" width="500">
 
-### Step 5: Django 프로젝트 구조 생성
+## Step 5: Django 프로젝트 구조 생성
 
 - 다시 상위 디렉토리로 이동합니다 . <br>
   <img src="img/20.png" width="400">
@@ -104,7 +104,7 @@
 - `mkdir static\css; mkdir static\js` 명령으로 static 디렉토리 안에 css와 js 디렉토리를 생성합니다. <br>
   <img src="img/23.png" width="500">
 
-### Step 6: settings.py 수정하기
+## Step 6: settings.py 수정하기
 - settings.py 파일을 열고, 아래 내용을 추가 합니다. <br>
 - 혹은, Copilot chat에서 제안된 코드에 마우스를 올려, `Apply in Editor` 버튼을 클릭하여 제안된 코드를 settings.py에 적용합니다. <br>
   <img src="img/24.png" width="400">
@@ -112,7 +112,7 @@
   <img src="img/25.png" width="300">
 
 
-### Step 7: Django 모델 생성하기
+## Step 7: Django 모델 생성하기
 
 - manage.py 파일이 있는 상위 디렉토리로 이동합니다. <br>
 - `python manage.py makemigrations` 명령어를 입력하여 마이그레이션을 생성합니다. <br>
@@ -122,7 +122,7 @@
   <img src="img/27.png" width="200">
 
 
-### Step 8: 저장
+## Step 8: 저장
 - Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>
   <img src="img/29.png" width="300">
 

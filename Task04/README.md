@@ -1,22 +1,22 @@
 # Task 4: Django 웹앱 만들기 (Part 2) 
 
-### Use case: 
+## Use case: 
 - Part 1에서 생성된 Django 웹앱에 Copilot을 활용해 모델을 생성하고, Copilot Edit기능을 사용해 템플릿 뷰에 내용을 신속하게 추가하면서 나머지 기능을 구현하며, 추가적인 컨텍스트를 제공하거나, CLI에서의 Copilot을 활용하는 등등 다양한 기능을 활용합니다.
 
-### 목표: 
+## 목표: 
 - 에러 해결을 위해 Copilot에게 다양한 컨텍스트 추가 방법을 익힙니다. #terminalSelection, #file, #selection
 
 - CLI 명령어 창에서 Copilot을 활용하는 방법을 익힙니다.
 - Copilot Edit을 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다.
 - prompt 파일을 생성하여, Copilot Edit을 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다. 
 
-### Step 1: User 모델 생성
+## Step 1: User 모델 생성
 
 - `python manage.py runserver` 명령을 통해 개발 서버를 실행 합니다. <br>
-  <img src="img/01.png" width="300"> 
+  <img src="img/01.png" width="500"> 
   - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br> 
-    <img src="img/02.png" width="400">
-    <img src="img/03.png" width="200">
+    <img src="img/02.png" width="500">
+    <img src="img/03.png" width="400">
     <img src="img/04.png" width="500">
 
 - `users/models.py` 파일을 열고, Copilot chat에 요청하여 모델을 정의 합니다. <br>
@@ -25,29 +25,29 @@
 
    * 혹, 불필요한 부분이 제안되었다면 삭제합니다. (닉네임, 이미지등)
 
-- `settings.py` 파일에 다음을 추가합니다. 
+- `settings.py` 파일에 다음을 추가합니다. <br>
     <img src="img/20.png" width="300">
 
 - 모델 정의 후, Copilot이 제안해 준, 이어지는 과정을 진행하기 위해 별도 CLI터미널을 실행합니다. <br>
-    <img src="img/09.png" width="300">
-    <img src="img/10.png" width="300">
+    <img src="img/09.png" width="500"> <br>
+    <img src="img/10.png" width="500">
 
 - venv를 실행합니다. <br>
-    <img src="img/11.png" width="200">
+    <img src="img/11.png" width="400">
 
 - `python manage.py makemigrations users` 명령어를 실행합니다. <br>
-    <img src="img/21.png" width="300">
+    <img src="img/21.png" width="500">
 
 - `python manage.py migrate` 명령어를 실행합니다. <br>
-    <img src="img/22.png" width="400">
+    <img src="img/22.png" width="500">
 
   * Copilot이 제안해준 명령어에 마우스를 위치하면, `'Insert into terminal`'을 통해 실행할 수도 있습니다. <br>
     <img src="img/13.png" width="400">
 
 - Admin페이지에 모델을 등록하기 위해 `admin.py` 파일을 열고, 모델을 등록합니다. <br>
-    <img src="img/23.png" width="300">
+    <img src="img/23.png" width="500"> <br>
 
-### Step 2: 슈퍼 유저 생성하기
+## Step 2: 슈퍼 유저 생성하기
 - CLI 터미널에서 Ctrl + i를 입력하고, Copilot 창에에 `superuser를 생성` 라고 입력합니다. 
   <img src="img/24.png" width="300">
   <img src="img/25.png" width="400">
@@ -57,7 +57,7 @@
   <img src="img/26.png" width="300">
 
 
-### Step 3: Memos 모델 생성
+## Step 3: Memos 모델 생성
 - 개발 서버는 계속 실행 중인 상태에서 진행합니다. <br>
 
 - `memos/models.py` 파일을 열고, Copilot chat에 요청하여 모델을 정의 합니다. <br>
@@ -83,13 +83,13 @@
 - Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>
 
 
-### Step 4 : 이후 과정 질문하기
+## Step 4 : 이후 과정 질문하기
 
 - `@workspace`를 활용해, Copilot에게 이후 프로젝트를 완성하기 위해 어떤 과정이 남았는지 확인합니다. <br>
     <img src="img/27.png" width="500">
     <img src="img/28.png" width="400">
 
-### Step 5: Prompt파일 생성 - Copilot Edit을 통해 URL 패턴, 뷰, 템플릿 동시에 생성하기
+## Step 5: Prompt파일 생성 - Copilot Edit을 통해 URL 패턴, 뷰, 템플릿 동시에 생성하기
 
 - **[Prompt 파일 이란?](https://code.visualstudio.com/docs/copilot/copilot-customization#_reusable-prompt-files-experimental)**
   - Prompt 파일은 재사용 가능한 프롬프트 지시문을 Markdown 형식으로 저장해, Copilot에 손쉽게 추가 맥락을 제공할 수 있도록 도와줍니다. 예컨대 특정 아키텍처 요건, 코드 스타일 등을 이 파일에 정리해두면, 반복적인 지시사항 없이도 채팅 창에서 손쉽게 불러와 의도된 코드를 빠르게 생성할 수 있습니다.
@@ -151,7 +151,8 @@
 - localhost:8000 으로 접속하여 프로젝트를 확인합니다. <br>
     <img src="img/48.png" width="700">
 
-### 지식 확인
+
+## 지식 확인
 - 다양한 컨텍스트 추가 방법 
 - CLI 명령어 창에서 Copilot을 활용
 - Copilot Edit의 동작 방식식
