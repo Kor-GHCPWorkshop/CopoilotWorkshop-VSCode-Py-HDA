@@ -12,9 +12,12 @@
   ### 언어 및 빌드
   (* 실제 환경까지 모두 셋업이 어려운 경우, 사용법과 코드를 제안받는 것에 목적을 두고 실습)
   - Python: 3.x, VS Code의 Python language pack
-  - Javascript, React
 
-## GitHub Copilot의 기본
+## GitHub Copilot 설명
+ - GitHub Copilot의 기본적인 내용에 대해 자료를 통해 설명 드립니다. 
+  - [GitHub Copilot 사용 베스트 프랙티스](https://docs.github.com/ko/enterprise-cloud@latest/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+  - [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview)
+  - [초보자를 위한 GitHub Copilot의 핵심기능소개](https://github.blog/ai-and-ml/github-copilot/github-for-beginners-essential-features-of-github-copilot/)
 
 ## Task 1: 간단한 함수 및 테스트 코드 제안 받기 (코드완성)
  - GitHub Copilot를 활용하여 간단한 함수와 테스트 코드를 제안받는 실습입니다. 이를 통해 기본적인 Copilot의 기능을 활용하는 방법을 익힙니다. 
@@ -23,29 +26,40 @@
 
 ## Task 2: 가위, 바위, 보 게임 만들기 (Copilot Chat사용)
  - GitHub Copilot과 함께 가위, 바위, 보 게임을 만들어 봅니다.
- - 추가적인 스팍, 도마뱁을 가위, 바위, 보 게임에 추가해 봅니다. 
  - Copilot을 통해 테스트 코드를 작성해 봅니다.
  - Copilot chat의 각종 메뉴들을 사용해 봅니다.
  - Copilot Code Review를 통해, 코드에 대한 리뷰를 받아 봅니다.
- - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
- - 이미지를 Copilot Chat에 컨텍스트로 제공하고, 이미지를 통해 코드를 제안받아 봅니다. (Vision)
+ - 이미지를 Copilot Chat에 컨텍스트로 제공하고(Vision기능), 이미지를 통해 코드를 제안받아 봅니다. (Vision)
 
-## Task 3: Django 웹앱 만들기 & Copilot에게 Custom instruction 제공하기 (Copilot Edit 사용)
+## Task 3: Django 웹앱 만들기 (Part 1)
   - Copilot Edit을 활용해 Django를 이용하여 간단한 웹앱을 만들어 봅니다.
   - Copilot에게 Custom instruction을 제공하여, 원하는 형태로 코드 제안을 받아 봅니다.
-  - 웹앱에 대한 다양한 CSS 스타일을 제안받아 봅니다.
-  - 웹앱에 대한 테스트 코드를 작성해 봅니다. 
-  - 웹앱을 Azure Kubernetes로 배포하는 GitHub Actions 워크플로우를 제안받아 봅니다.
 
-## Task 4: 코드 내 문제점을 찾고 해결 방법 제안 받기 (추가 컨텍스트 제공공)
-  - 코드에서 Copilot을 트러블 슈팅이나 보안 문제점 해결에 이용해 봅니다.  
+## GitHub Copilot Prompt Engineering
+ - GitHub Copilot을 활용할 때의 프롬프트 엔지니어링 방법에 대해 설명 드립니다. 
+ - [Best practices for using GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/prompt-crafting)
+ - [IDE에서 GitHub Copilot 사용 팁, 트릭과 모범 사례](https://github.blog/developer-skills/github/how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/)
+ - [프롬프트엔지니어링과 LMM에 대한 개발자 가이드](https://github.blog/ai-and-ml/generative-ai/prompt-engineering-guide-generative-ai-llms/)
+ - [Introduction to prompt engineering with GitHub Copilot](https://learn.microsoft.com/training/modules/introduction-prompt-engineering-with-github-copilot//?WT.mc_id=academic-113596-abartolo)
+- [GitHub Copilot에게 더 좋은 프롬프트를 작성하기 위한 예제와 모범사례](https://github.blog/developer-skills/github/how-to-write-better-prompts-for-github-copilot/)
+
+
+## Task 4: Django 웹앱 만들기 (Part 2)
+  - Copilot Edit을 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다.
+  - prompt 파일을 생성하여, Copilot Edit을 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다.
+  - 코드에서 Copilot을 트러블 슈팅에 이용해 봅니다.  
+  - CLI 명령어 창에서 Copilot을 활용하는 방법을 익힙니다.
   - @workspace, #file, #selection, #terminalSelection등 다양한 방법으로 추가적인 문맥정보를 제공하는 방법을 실습합니다. 
 
-## Task 5: 코드 리팩토링
-  - 코드 블럭을 Copilot을 활용하여 리팩토링 해 보는 예제 입니다.
+## Task 5: Test코드 작성 
+   - Copilot Edit을 활용하여, 여러개의 테스트 파일을 동시에 생성하는 방법을 실습합니다.
+   - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
+
+## Task 6: 코드 리팩토링, 보안 문제 확인
+  - 주어진 코드 블럭을 Copilot을 활용하여 리팩토링 하거나, 보안 문제를 확인해 보는 실습 예제 입니다.
   
 
-## Task 9: CI/CD 파이프라인 실습 
+## Task 7: CI/CD 파이프라인 실습 
   - 주어진 파이프라인에 대한 설명과 변환등을 GitHub Copilot을 사용하여 실습하는 예제입니다.
 
 

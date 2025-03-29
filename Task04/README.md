@@ -151,6 +151,8 @@
 - localhost:8000 으로 접속하여 프로젝트를 확인합니다. <br>
     <img src="img/48.png" width="700">
 
+- 프로젝트를 실행해 보고, 다른 에러가 발생하면, Copilot Edit에게 다양한 프롬프트로 질문하면서, 다양한 컨텍스트를 (#codebase, #file, #selection, #terminalSelection, @workspace) 제공하여 해결하는 실습을 진행해 봅니다. <br>
+
 
 ## 지식 확인
 - 다양한 컨텍스트 추가 방법 
