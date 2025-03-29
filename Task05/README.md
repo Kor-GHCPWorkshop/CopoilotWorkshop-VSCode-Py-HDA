@@ -22,7 +22,7 @@
    <img src="img/04.png" width="600"> 
 
  - 테스트 실행 방법에 대해 확인합니다. <br>
-   <img src="img/05.png" width="50"> <br>
+   <img src="img/05.png" width="500"> <br>
    <img src="img/06.png" width="500"> <br>
 
  - 전체 프로젝트에 대한 테스트 코드를 실행 합니다. <br>
