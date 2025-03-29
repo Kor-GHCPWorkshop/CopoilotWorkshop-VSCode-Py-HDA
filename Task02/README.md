@@ -16,13 +16,13 @@
 - 사용자가 가위,바위,보 중 하나를 선택하고, 컴퓨터와 대결하는 로직을 추가합니다.
 - 사용자가 선택한 가위, 바위, 보와 컴퓨터의 선택을 비교하여 승패를 결정하는 로직을 추가합니다.
 - 사용자가 게임을 계속할 것인지 종료할 것인지 선택할 수 있는 로직을 추가합니다.<br>
-   <img src="img/01.png" alt="image" width="400"/><br>
+   <img src="img/01.png" alt="image" width="800"/><br>
 - 게임을 실행하고, 게임 결과를 출력 받아 봅니다.<br>
-   <img src="img/02.png" alt="image" width="400"/><br>
+   <img src="img/02.png" alt="image" width="800"/><br>
 
 ## Step 2 : Lizard, Spock 추가하기
 - 만들어진 게임에 추가로 Lizard, Spock의 로직을 Copilot을 활용하여 추가합니다.<br>
-![image](img/image.png)<br>
+   <img src="img/image.png" width="1000"><br>
 - `choices` 리스트에 Lizard와 Spock을 추가합니다.<br>
     <img src="img/03.png" alt="image" width="400"/><br>
 
