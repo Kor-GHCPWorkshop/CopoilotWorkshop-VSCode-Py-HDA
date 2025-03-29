@@ -1,4 +1,4 @@
-# Task 6: 코드 리팩토링
+# Task 6: 코드 리팩토링, 보안 문제 확인
 
 ### Use case: 
 - GitHub Copilot를 활용하여 코드 리팩토링을 진행합니다.

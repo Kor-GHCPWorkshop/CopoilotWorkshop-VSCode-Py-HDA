@@ -1,4 +1,4 @@
-# Task 5: Django 웹앱 만들기 (Part 1) 
+# Task 5: Test코드 작성
 
 ## Use case: 
 - Copilot에게 Test code를 제안 받습니다.
@@ -7,7 +7,7 @@
  - Copilot Edit을 활용하여, 여러개의 테스트 파일을 동시에 생성하는 방법을 실습합니다.
  - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
 
-## Step 1: Coiplot Edit을 활용하여 테스트 코드 작성
+## Step 1: Copilot Edit을 활용하여 테스트 코드 작성
  - Task 3에서 생성한 TestCustom instructions를 확인합니다. (`test-style.md`) <br>
    (원하는 내용이 있을 경우 추가 삭제) <br>
    <img src="img/01.png" width="800">
