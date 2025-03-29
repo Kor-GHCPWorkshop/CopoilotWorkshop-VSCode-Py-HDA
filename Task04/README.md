@@ -13,9 +13,9 @@
 ## Step 1: User 모델 생성
 
 - `python manage.py runserver` 명령을 통해 개발 서버를 실행 합니다. <br>
-  <img src="img/01.png" width="500"> 
+  <img src="img/01.png" width="1000"> 
   - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br> 
-    <img src="img/02.png" width="500">
+    <img src="img/02.png" width="1000"> <br>
     <img src="img/03.png" width="400"> <br>
     <img src="img/04.png" width="500">
 
@@ -53,7 +53,7 @@
    - `Insert into terminal` 혹은 `copy` 버튼을 활용합니다. 
 
 - `python manage.py createsuperuser` 명령어를 통해해 슈퍼 유저를 생성합니다. <br>
-  <img src="img/26.png" width="500">
+  <img src="img/26.png" width="900">
 
 
 ## Step 3: Memos 모델 생성
@@ -132,7 +132,7 @@
 - **Keep**을 클릭하여 생성된 내용을 유지합니다. <br>
 
 - 추가로 필요한 내용들을 요청하여 구성합니다. <br>
-    <img src="img/39.png" width="400">
+    <img src="img/39.png" width="900">
 - 생성된 파일들을 확인하고, Keep 하여 유지합니다. 그리고 파일들을 저장합니다. <br>
     <img src="img/40.png" width="600">
     <img src="img/41.png" width="500">

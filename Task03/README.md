@@ -21,7 +21,7 @@
 - 붙여넣어진 파일들의 내용을 확인하고, 별도로 원하는 내용이 있을 경우 수정해 봅니다. 
 
 - Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Preference: Open Workspace Settings (JSON)`을 선택합니다. <br>
-  <img src="img/02.png" width="300">
+  <img src="img/02.png" width="800">
 
 - settings.json 파일에 "github.copilot.chat.codeGeneration.instructions"을 추가합니다. <br>
   <img src="img/03.png" width="400">
