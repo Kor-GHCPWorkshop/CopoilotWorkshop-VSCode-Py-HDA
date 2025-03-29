@@ -22,7 +22,7 @@
 
 ## Step 2 : Lizard, Spock 추가하기
 - 만들어진 게임에 추가로 Lizard, Spock의 로직을 Copilot을 활용하여 추가합니다.<br>
-   <img src="img/image.png" width="1000"><br>
+   <img src="img/image.png" width="600"><br>
 - `choices` 리스트에 Lizard와 Spock을 추가합니다.<br>
     <img src="img/03.png" alt="image" width="400"/><br>
 
