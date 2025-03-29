@@ -22,8 +22,8 @@
    <img src="img/04.png" width="600"> 
 
  - 테스트 실행 방법에 대해 확인합니다. <br>
-   <img src="img/05.png" width="700"> <br>
-   <img src="img/06.png" width="700"> <br>
+   <img src="img/05.png" width="50"> <br>
+   <img src="img/06.png" width="500"> <br>
 
  - 전체 프로젝트에 대한 테스트 코드를 실행 합니다. <br>
    <img src="img/07.png" width="800"> <br>
@@ -56,7 +56,7 @@
    <img src="img/11.png" width="500"> <br>
  
   - 제안되는 commit message 내용들을 확인합니다. <br>
-   <img src="img/12.png" width="600">
+   <img src="img/12.png" width="500">
 
 ## 추가자료
 - [GitHub Copilot을 활용한 Unit test생성 사용예](https://github.blog/ai-and-ml/github-copilot/how-to-generate-unit-tests-with-github-copilot-tips-and-examples/)
