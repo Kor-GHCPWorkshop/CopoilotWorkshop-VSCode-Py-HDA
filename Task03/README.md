@@ -15,11 +15,11 @@
     - 예를 들어, 특정한 스타일의 코드를 제안받고 싶거나, 특정한 언어로 코드를 제안받고 싶을 때 사용합니다. 
     - Custom instructions는 다양한 형태로 작성할 수 있습니다. 
     
-      - [.github/custom-instructions.md 파일로 작성](https://docs.github.com/en/enterprise-cloud@latest/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot?tool=vscode)
-         - VS Code의 설정에서 관련 설정을 활성화 
+      - [.github/custom-instructions.md 파일로 작성](https://docs.github.com/en/enterprise-cloud@latest/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot?tool=vscode) <br>
+         - VS Code의 설정에서 관련 설정을 활성화 <br>
           <img src="img/30.png" width="600">
           <img src="img/31.png" width="800">
-         - Custom instructions를 작성합니다.
+         - Custom instructions를 작성합니다. <br>
           <img src="img/32.png" width="600">
 
       - VS Code의 User setting, 혹은 Workspace setting을 하는 JSON파일에 Text 혹은 File로 형식으로 작성되며, VS Code의 settings.json 파일에 추가됩니다.
