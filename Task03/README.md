@@ -13,36 +13,46 @@
  - **[Custom instructions란](https://code.visualstudio.com/docs/copilot/copilot-customization)** 
     - Copilot에게 특정한 컨텍스트를 제공하여, 원하는 형태로 코드 제안을 받는 방법입니다. 
     - 예를 들어, 특정한 스타일의 코드를 제안받고 싶거나, 특정한 언어로 코드를 제안받고 싶을 때 사용합니다. 
-    - Custom instructions는 JSON 형식으로 작성되며, VS Code의 settings.json 파일에 추가됩니다.
+    - Custom instructions는 다양한 형태로 작성할 수 있습니다. 
+    
+      - [.github/custom-instructions.md 파일로 작성](https://docs.github.com/en/enterprise-cloud@latest/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot?tool=vscode)
+         - VS Code의 설정에서 관련 설정을 활성화 
+          <img src="img/30.png" width="600">
+          <img src="img/31.png" width="800">
+         - Custom instructions를 작성합니다.
+          <img src="img/32.png" width="600">
 
-- 프로젝트에 `/docs` 디렉토리를 생성합니다. 
-- 예제로 주어진 /docs 디렉토리의 파일들을 복사하여, 실습중인 프로젝트에에 붙여 넣습니다. <br>
-  <img src="img/01.png" width="300">
-- 붙여넣어진 파일들의 내용을 확인하고, 별도로 원하는 내용이 있을 경우 수정해 봅니다. 
+      - VS Code의 User setting, 혹은 Workspace setting을 하는 JSON파일에 Text 혹은 File로 형식으로 작성되며, VS Code의 settings.json 파일에 추가됩니다.
 
-- Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Preference: Open Workspace Settings (JSON)`을 선택합니다. <br>
-  <img src="img/02.png" width="800">
+          - 프로젝트에 `/docs` 디렉토리를 생성합니다. 
+          - 예제로 주어진 /docs 디렉토리의 파일들을 복사하여, 실습중인 프로젝트에에 붙여 넣습니다. <br>
+            <img src="img/01.png" width="300">
+          - 붙여넣어진 파일들의 내용을 확인하고, 별도로 원하는 내용이 있을 경우 수정해 봅니다. 
 
-- settings.json 파일에 "github.copilot.chat.codeGeneration.instructions"을 추가합니다. <br>
-  <img src="img/03.png" width="400">
-```json
-{
-  "github.copilot.chat.codeGeneration.instructions": [
-        {
-            "file": "docs/spec.md"
-        },
-        {
-            "file": "docs/python-style.md"
-        },
-        {
-            "file": "docs/database-style.md"
-        },
-        {
-            "file": "docs/test-style.md"
-        }
-    ]
-}
-```
+          - Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Preference: Open Workspace Settings (JSON)`을 선택합니다. <br>
+            <img src="img/02.png" width="800">
+
+          - settings.json 파일에 "github.copilot.chat.codeGeneration.instructions"을 추가합니다. <br>
+            <img src="img/03.png" width="400">
+          ```json
+          {
+            "github.copilot.chat.codeGeneration.instructions": [
+                  {
+                      "file": "docs/spec.md"
+                  },
+                  {
+                      "file": "docs/python-style.md"
+                  },
+                  {
+                      "file": "docs/database-style.md"
+                  },
+                  {
+                      "file": "docs/test-style.md"
+                  }
+              ]
+          }
+          ```
+    
 - Copilot Chat에 `이 프로젝틀 구성하려면 어떻게 해야하는지 알려줘` 라고 질문한뒤, custom instructions의 파일들이 참조로 추가되는지 확인한다. <br>
    <img src="img/04.png" width="400">
 
