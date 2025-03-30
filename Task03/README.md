@@ -18,7 +18,7 @@
       - [.github/custom-instructions.md 파일로 작성](https://docs.github.com/en/enterprise-cloud@latest/copilot/customizing-copilot/adding-repository-custom-instructions-for-github-copilot?tool=vscode) <br>
          - VS Code의 설정에서 관련 설정을 활성화 <br>
           <img src="img/30.png" width="600">
-          <img src="img/31.png" width="800">
+          <img src="img/31.png" width="800"><br>
          - Custom instructions를 작성합니다. <br>
           <img src="img/32.png" width="600">
 
