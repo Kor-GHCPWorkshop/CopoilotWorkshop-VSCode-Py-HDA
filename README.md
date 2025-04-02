@@ -13,7 +13,7 @@
   (* 실제 환경까지 모두 셋업이 어려운 경우, 사용법과 코드를 제안받는 것에 목적을 두고 실습)
   - Python: 3.x, VS Code의 Python language pack
 
-## GitHub Copilot 설명
+## 설명: GitHub Copilot 미리보기
  - GitHub Copilot의 기본적인 내용에 대해 자료를 통해 설명 드립니다. 
   - [GitHub Copilot 사용 베스트 프랙티스](https://docs.github.com/ko/enterprise-cloud@latest/copilot/using-github-copilot/best-practices-for-using-github-copilot)
   - [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview)
@@ -35,7 +35,7 @@
   - Copilot Edit을 활용해 Django를 이용하여 간단한 웹앱을 만들어 봅니다.
   - Copilot에게 Custom instruction을 제공하여, 원하는 형태로 코드 제안을 받아 봅니다.
 
-## GitHub Copilot Prompt Engineering
+## 설명: GitHub Copilot Prompt Engineering
  - GitHub Copilot을 활용할 때의 프롬프트 엔지니어링 방법에 대해 설명 드립니다. 
  - [Best practices for using GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/prompt-crafting)
  - [IDE에서 GitHub Copilot 사용 팁, 트릭과 모범 사례](https://github.blog/developer-skills/github/how-to-use-github-copilot-in-your-ide-tips-tricks-and-best-practices/)
@@ -62,5 +62,9 @@
 ## [Task 7](/Task07/README.md): CI/CD 파이프라인 실습 
   - 주어진 파이프라인에 대한 설명과 변환등을 GitHub Copilot을 사용하여 실습하는 예제입니다.
 
-
+## 설명: Copilot Extension이란?
+  - Copilot Extension은 Copilot Chat에 추가적인 기능을 제공하는 확장 프로그램입니다.
+  - GitHub Marketplace에 올라와 있는 확장 프로그램을 Organization의 관리자가 설치하여 사용할 수 있습니다.
+  - 자체적인 Extension을 다양한 방법 (API, RAG, 자체 모델 사용등)으로 구축하여 활용할 수 있습니다. 
+  ** Copilot Extension을 Org단위로 사용하기 위해서는 GitHub Enterprise 라이센스가 추가로 필요합니다. 
 
