@@ -63,6 +63,7 @@
   <img src="img/05.png" width="300">
 
 - `@workspace`를 사용하여 `이 Django 프로젝트를 생성하기 위한 순서는?` 이라고 질문하여 프로젝트 생성 절차를 확인합니다. <br>
+  - [@workspace](https://code.visualstudio.com/docs/copilot/workspace-context#_what-sources-does-workspace-use-for-context) 는 현재 작업 중인 디렉토리의 파일들을 참조하여, Copilot이 더 나은 코드를 제안할 수 있도록 도와줍니다. <br>
   <img src="img/06.png" width="400">
 
   <img src="img/07.png" width="400">
