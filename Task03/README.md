@@ -19,7 +19,7 @@
          - VS Code의 설정에서 관련 설정을 활성화 <br>
           <img src="img/30.png" width="600">
           <img src="img/31.png" width="800"><br>
-         - Custom instructions를 작성합니다. <br>
+         - [Copilot instructions](src/copilot-instructions.md)를 작성합니다. <br>
           <img src="img/32.png" width="600">
 
       - VS Code의 User setting, 혹은 Workspace setting을 하는 JSON파일에 Text 혹은 File로 형식으로 작성되며, VS Code의 settings.json 파일에 추가됩니다.
