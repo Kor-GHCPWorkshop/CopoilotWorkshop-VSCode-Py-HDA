@@ -8,14 +8,15 @@
 
 - CLI 명령어 창에서 Copilot을 활용하는 방법을 익힙니다.
 - Copilot Edit을 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다.
-- prompt 파일을 생성하여, Copilot Edit을 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다. 
+- prompt 파일을 생성하여, Copilot Edit 모드를 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다. 
 
 ## Step 1: User 모델 생성
 
 - `python manage.py runserver` 명령을 통해 개발 서버를 실행 합니다. <br>
-  <img src="img/01.png" width="1000"> 
+  <img src="img/01.png" width="800"> <br>
+
   - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br> 
-    <img src="img/02.png" width="1000"> <br>
+    <img src="img/02.png" width="800"> <br>
     <img src="img/03.png" width="400"> <br>
     <img src="img/04.png" width="500">
 
@@ -110,7 +111,7 @@
 
 
 - Copilot Edit으로 이동합니다. <br>
-    <img src="img/32.png" width="300">
+    <img src="img/32.png" width="400">
 - 하단에 채팅창에서 클립 모양의 아이콘 'Add Files..'을 클릭합니다. <br>
     <img src="img/33.png" width="300">
 - Prompt를 선택합니다. <br>
