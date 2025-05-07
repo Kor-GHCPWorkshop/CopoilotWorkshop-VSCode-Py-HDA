@@ -32,17 +32,17 @@
    <img src="img/05.png" width="400"> <br>
 
 - Agent모드가 실패한 테스트 내용을 분석하고, 해결 방법을 제안합니다. <br>
-   <img src="img/06.png" width="800"> <br>
+   <img src="img/06.png" width="600"> <br>
 
 - 실패한 테스트를 수정하도록 요청합니다. <br> 
    <img src="img/07.png" width="400"> <br>
 
 - Agent모드가 실패한 테스트를 수정하고 다시 실행합니다. <br>
-   <img src="img/08.png" width="400"> <br>
+   <img src="img/08.png" width="600"> <br>
 
 - 실행 결과, 다른 테스트가 실패한 경우, Agent 모드가 다시 수정합니다. <br>
-   <img src="img/08-1.png" width="800"> <br>
-   <img src="img/08-2.png" width="400"> <br>
+   <img src="img/08-1.png" width="600"> <br>
+   <img src="img/08-2.png" width="600"> <br>
 
 - 모든 테스트가 성공적으로 완료된 경우, Agent 모드가 성공적으로 완료되었다고 알려줍니다. <br>
    <img src="img/08-3.png" width="500"> <br>
