@@ -52,7 +52,7 @@
   - @workspace, #file, #selection, #terminalSelection등 다양한 방법으로 추가적인 문맥정보를 제공하는 방법을 실습합니다. 
 
 ## [Task 5](/Task05/README.md): Test코드 작성 
-   - Copilot Edit을 활용하여, 여러개의 테스트 파일을 동시에 생성하는 방법을 실습합니다.
+   - Copilot Agent 모드를 활용해 Test code를 생성하고 실패된 테스트를 수정합니다.
    - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
 
 ## [Task 6](/Task06/README.md): 코드 리팩토링, 보안 문제 확인
