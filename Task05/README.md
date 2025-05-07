@@ -20,7 +20,7 @@
  - Copilot Agent 모드가 테스트 코드들을 생성합니다. <br>
    <img src="img/03.png" width="600"> <br>
    - Agent모드가 자동으로 테스트 파일들도 생성하여 추가합니다. <br>
-    <img src="img/03-1.png" width="400"> <br>
+    <img src="img/03-1.png" width="300"> <br>
 
  - Agent 모드가 생성된 테스트 코드를 실행하여 결과를 확인할 것을 사용자에게 묻습니다. 'Continue' 버튼을 눌러 테스트를 실행합니다.  <br>
  	<img src="img/04.png" width="400"> <br>
