@@ -62,9 +62,5 @@
 ## [Task 7](/Task07/README.md): CI/CD 파이프라인 실습 
   - 주어진 파이프라인에 대한 설명과 변환등을 GitHub Copilot을 사용하여 실습하는 예제입니다.
 
-## 설명: Copilot Extension이란?
-  - [Copilot Extension](https://github.com/features/copilot/extensions)은 Copilot Chat에 추가적인 기능을 제공하는 확장 프로그램입니다.
-  - [GitHub Marketplace](https://github.com/marketplace?type=apps&copilot_app=true)에 올라와 있는 확장 프로그램을 Organization의 관리자가 설치하여 사용할 수 있습니다.
-  - 자체적인 Extension을 다양한 방법 (API, RAG, 자체 모델 사용등)으로 구축하여 활용할 수 있습니다. 
-  ** Copilot Extension을 Org단위로 사용하기 위해서는 GitHub Enterprise 라이센스가 추가로 필요합니다. 
+
 
