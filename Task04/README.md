@@ -112,20 +112,14 @@
 
 - Copilot Edit으로 이동합니다. <br>
     <img src="img/32.png" width="400">
-- 하단에 채팅창에서 클립 모양의 아이콘 'Add Files..'을 클릭합니다. <br>
-    <img src="img/33.png" width="300">
-- Prompt를 선택합니다. <br>
-    <img src="img/34.png" width="500">
-- `template.prompt.md` 파일을 선택합니다. <br>
-    <img src="img/35.png" width="500"> 
-- template 프롬프트가 선택된 것을 확인합니다. <br>
-    <img src="img/36.png" width="400">
-- 다시 클립 모양 아이콘을 클릭하고 Folder를 선택합니다. <br>
-    <img src="img/42.png" width="400">
 
-- Chat에 아래와 같이 입력합니다. <br> 
-   - `이 프로젝트를 완성하기 위해, URL패턴, 뷰, 템플릿을 구성해줘`
-    <img src="img/43.png" width="500">    
+- [Prompt files를 실행하는 방법](https://code.visualstudio.com/updates/v1_100#_prompt-files)은 3가지가 있습니다. <br>
+	- Copilot Chat에서 '`/`'를 입력하고 Prompt파일 선택. <br>
+	- Prompt 파일을 열고 우측 상단의 'Play' 버튼을 클릭합니다. <br>
+	- Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Chat: Run Prompt File..`을 선택합니다. <br>
+
+- 첫번째 방법'/' 을 통해 Prompt파일을 선택 한 뒤, Chat에 아래와 같이 입력합니다. (클립 버튼을 클릭하여 'memojjang' 디렉토리 선택) <br> 
+   - `memojjang 프로젝트의 URL패턴, 뷰, 템플릿을 구성해줘`
 
 - Copilot Edit이 파일들을 완성합니다. <br>
     <img src="img/38.png" width="600">
