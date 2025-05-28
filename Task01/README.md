@@ -30,13 +30,13 @@
   <img src = "img/05.png" width = "500">
   
     ** 참고: **
-	  - 제안되는 리스트 목록을 확인하는 Ctrl + Enter 키에 변경 내용이 있어, 이를 확인하려면 아래와 같이 진행합니다. 
+	  - 제안되는 리스트 목록을 확인하는 Ctrl + Enter 키에 변경 내용이 있어, 이를 확인하려면 아래와 같이 진행합니다. <br>
 	  - 상단의 Copilot 아이콘을 클릭하고, `Configure Code completion`을 선택합니다.<br>
-	   <img src = "img/19.png" width = "300">
+	   <img src = "img/19.png" width = "300"> <br>
 	  - 'Open Completions Panel'을 선택합니다.<br>
-	   <img src = "img/20.png" width = "300">
-	  - 단축키를 설정할 수 있습니다. 
-	  - Ctrl + Shift + P를 눌러 명령 팔레트를 열고 'GitHub Copilot: Open Completions Panel' 우측의 톱니바퀴 모양을 눌러 키보드 단축키 설정으로 이동합니다.<br>
+	   <img src = "img/20.png" width = "300"> <br>
+	  - 단축키를 설정할 수 있습니다. <br>
+	  - `Ctrl + Shift + P`를 눌러 명령 팔레트를 열고 '`GitHub Copilot: Open Completions Panel`' 우측의 톱니바퀴 모양을 눌러 키보드 단축키 설정으로 이동합니다.<br>
 	   <img src = "img/22.png" width = "400"> <br>
 	  - 왼편의 '+' 버튼을 눌러 단축키를 설정합니다.<br>
 	   <img src = "img/23.png" width = "400"> <br> 
