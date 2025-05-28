@@ -29,7 +29,7 @@
 - 회색으로 제안된 상태에서, (코드를 수락하지 않은 상태에서) Ctrl + Enter를 눌러서 제안되는 리스트를 확인합니다.<br>
   <img src = "img/05.png" width = "500">
   
-    ** 참고: **
+    **참고:** <br>
 	  - 제안되는 리스트 목록을 확인하는 Ctrl + Enter 키에 변경 내용이 있어, 이를 확인하려면 아래와 같이 진행합니다. <br>
 	  - 상단의 Copilot 아이콘을 클릭하고, `Configure Code completion`을 선택합니다.<br>
 	   <img src = "img/19.png" width = "300"> <br>

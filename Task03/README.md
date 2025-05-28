@@ -91,7 +91,7 @@
   <img src="img/16.png" width="200">
   <img src="img/17.png" width="500">
 
-  ** 참고: Copilot chat에서 `#folder`가 없어져, 대신 아래와 같이 클립모양 버튼 `Add Context`를 클릭하여, 디렉토리를 선택할 수 있습니다. <br>
+  **참고**: Copilot chat에서 `#folder`가 없어져, 대신 아래와 같이 클립모양 버튼 `Add Context`를 클릭하여, 디렉토리를 선택할 수 있습니다. <br>
   <img src="img/33.png" width="200"> <br>
   <img src="img/34.png" width="300"> <br>
 
