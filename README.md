@@ -62,5 +62,7 @@
 ## [Task 7](/Task07/README.md): CI/CD 파이프라인 실습 
   - 주어진 파이프라인에 대한 설명과 변환등을 GitHub Copilot을 사용하여 실습하는 예제입니다.
 
-
+## [Task 8](/Task08/README.md): MCP (Model Context Protocol) 활용 실습
+ - VS Code에서 Model Context Protocol 서버를 설정하고, 활용해 봅니다.
+   
 
