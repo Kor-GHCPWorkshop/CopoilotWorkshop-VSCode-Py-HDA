@@ -32,7 +32,8 @@
 ### MCP 서버의 예시
   - [MCP 서버 예시](https://mcpservers.org/) 
   - [MCP server repository](https://github.com/modelcontextprotocol/servers) <br>
-  
+  - [MCP.so](https://mcp.so/)
+
   에서 다양한 MCP 서버를 확인할 수 있습니다.
 
 
