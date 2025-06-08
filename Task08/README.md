@@ -14,7 +14,8 @@
 ### MCP 구조 : 클라이언트 - 서버 구조
   - MCP clients (like VS Code) connect to MCP servers and request actions on behalf of the AI model
   - MCP servers provide one or more tools that expose specific functionalities through a well-defined interface
-  - The Model Context Protocol (MCP) defines the message format for communication between clients and servers, including tool discovery, invocation, and response handling
+  - The Model Context Protocol (MCP) defines the message format for communication between clients and servers, including tool discovery, invocation, and response handling <br>
+
   <img src="./img/01.png" width="500"> <br>
   <img src="./img/mcp-stack.svg" width="500"> <br>
 
@@ -37,40 +38,40 @@
 
 ## Step 2: VS Code에서 테스트 MCP 서버 설정 (npm 패키지 설치)
 
-- [VS Code에서 MCP 서버설정: GitHub도움말](https://docs.github.com/en/enterprise-cloud@latest/copilot/customizing-copilot/extending-copilot-chat-with-mcp?tool=vscode)을 참고하여, MCP 서버를 설정합니다.
+- [VS Code에서 MCP 서버설정: GitHub도움말](https://docs.github.com/en/enterprise-cloud@latest/copilot/customizing-copilot/extending-copilot-chat-with-mcp?tool=vscode)을 참고하여, MCP 서버를 설정합니다. <br>
 
-- 먼저, VS Code Agent 모드의 공구 모양 아이콘을 클릭하고, '`Add More Tools`'를 선택합니다. 
+- 먼저, VS Code Agent 모드의 공구 모양 아이콘을 클릭하고, '`Add More Tools`'를 선택합니다. <br>
   <img src="./img/02.png" width="300"> <br>
   <img src="./img/03.png" width="300"> <br>
 
-- `Add MCP server`를 선택합니다.
+- `Add MCP server`를 선택합니다. <br>
   <img src="./img/04.png" width="400"> <br>
 
-- NPM Package를 선택하고 `@modelcontextprotocol/server-filesystem` 를 입력합니다.
+- NPM Package를 선택하고 `@modelcontextprotocol/server-filesystem` 를 입력합니다. <br>
   <img src="./img/06.png" width="400"> <br>
 
-- Allow를 선택하고, 비어있는 Temp 디렉토리를 생성하고 패스를 입력합니다. 
+- Allow를 선택하고, 비어있는 Temp 디렉토리를 생성하고 패스를 입력합니다. <br>
   <img src="./img/07.png" width="400"> <br>
   <img src="./img/08.png" width="400"> <br>
 
-- Server ID에서는 그냥 Enter를 눌러 기본값을 사용합니다.
+- Server ID에서는 그냥 Enter를 눌러 기본값을 사용합니다. <br>
   <img src="./img/09.png" width="400"> <br>
 
-- `User settings` 혹은 `Workspace settings`을 선택합니다. 여기서는 `Workspace settings`을 선택합니다.
+- `User settings` 혹은 `Workspace settings`을 선택합니다. 여기서는 `Workspace settings`을 선택합니다. <br>
   <img src="./img/10.png" width="400"> <br>
 
-- mcp.json 파일에 추가된 MCP 서버 설정을 확인합니다.
+- mcp.json 파일에 추가된 MCP 서버 설정을 확인합니다. <br>
   <img src="./img/11.png" width="600"> <br>
 
-- 다시 Agent 모드의 공구 모양 아이콘을 클릭하고, 추가된 Tool을 확인합니다.
+- 다시 Agent 모드의 공구 모양 아이콘을 클릭하고, 추가된 Tool을 확인합니다. <br>
   <img src="./img/12.png" width="500"> <br>
 
 
 ## Step 3: MCP 서버 테스트
 
-- 'filesystem'을을 테스트 하기 위해 Agent 모드에서 아래와 같이 실행해 봅니다. 
+- 'filesystem'을을 테스트 하기 위해 Agent 모드에서 아래와 같이 실행해 봅니다. <br>
   - `C:/temp 디렉토리에 testmcp.md라는 이름으로 새로운 파일을 생성해줘`
-  - `C:/temp 디렉토리에 생성된 testmcp.md파일을 C:/temp/Logs 디렉토리로 옮겨줘` --> MCP tool이 실행됩니다. 
+  - `C:/temp 디렉토리에 생성된 testmcp.md파일을 C:/temp/Logs 디렉토리로 옮겨줘` --> MCP tool이 실행됩니다. <br>
   <img src="./img/13.png" width="400"> <br>
   <img src="./img/14.png" width="400"> <br>
 
@@ -125,7 +126,7 @@
 
 ## Step 5: Docker 형태의 MCP 서버 설정 (GitHub MCP server)
  - https://github.com/github/github-mcp-server 저장소의 GitHub MCP 서버를 Docker 형태로 설정합니다.
- - 이 MCP 서버는 사용자 랩탑에 Docker 엔진이 실행되고 있어야 합니다. (docker desktop 설치 필요요)
+ - 이 MCP 서버는 사용자 랩탑에 Docker 엔진이 실행되고 있어야 합니다. (docker desktop 설치 필요)
  - 저장소 Readme 파일의 Installation 부분에 있는 설정 방법을 `mcp.json` 파일에 추가하여 tool이 추가되는 것을 확인합니다. 
    ```json
 	"inputs": [
