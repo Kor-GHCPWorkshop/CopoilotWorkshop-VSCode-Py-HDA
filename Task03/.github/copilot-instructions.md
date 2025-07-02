@@ -42,47 +42,43 @@ Django 기반의 메모장 웹 애플리케이션
 - 디렉토리 구조
   - .github/
   - docs/
-  - memojjang/                      # 메인 Django 프로젝트
-    ├── apps/                       # Django 앱들
-    │   ├── __init__.py
-    │   ├── __pycache__/
-    │   │
-    │   ├── memos/                  # 메모 앱
-    │   │   ├── __init__.py
-    │   │   ├── admin.py            # 관리자 설정
-    │   │   ├── apps.py             # 앱 설정
-    │   │   ├── models.py           # 데이터 모델
-    │   │   ├── views.py            # 뷰 로직
-    │   │   ├── tests.py            # 테스트
-    │   │   ├── migrations/         # 데이터베이스 마이그레이션
-    │   │   └── __pycache__/
-    │   │
-    │   └── users/                  # 사용자 앱
-    │       ├── __init__.py
-    │       ├── admin.py            # 관리자 설정
-    │       ├── apps.py             # 앱 설정
-    │       ├── models.py           # 데이터 모델
-    │       ├── views.py            # 뷰 로직
-    │       ├── tests.py            # 테스트
-    │       ├── migrations/         # 데이터베이스 마이그레이션
-    │       └── __pycache__/
-  - ├── db/                         # 데이터베이스 관련 파일
-    │
-    ├── static/                     # 정적 파일
-    │   ├── css/                    # CSS 파일
-    │   └── js/                     # JavaScript 파일
-    │
-    └── templates/                  # Django 템플릿
-        ├── base.html               # 기본 템플릿
-        ├── home.html               # 홈페이지 템플릿
-        ├── memos/                  # 메모 관련 템플릿
-        │   ├── memo_confirm_delete.html
-        │   ├── memo_detail.html
-        │   ├── memo_form.html
-        │   └── memo_list.html
-        └── users/                  # 사용자 관련 템플릿
-            ├── login.html
-            └── register.html
+  - memojjang/                  # 메인 Django 프로젝트
+  - apps/                     # Django 앱들
+    - __init__.py
+    - __pycache__/
+    - memos/                  # 메모 앱
+      - __init__.py
+      - admin.py              # 관리자 설정
+      - apps.py               # 앱 설정
+      - models.py             # 데이터 모델
+      - views.py              # 뷰 로직
+      - tests.py              # 테스트
+      - migrations/           # 데이터베이스 마이그레이션
+      - __pycache__/
+    - users/                  # 사용자 앱
+      - __init__.py
+      - admin.py              # 관리자 설정
+      - apps.py               # 앱 설정
+      - models.py             # 데이터 모델
+      - views.py              # 뷰 로직
+      - tests.py              # 테스트
+      - migrations/           # 데이터베이스 마이그레이션
+      - __pycache__/
+  - db/                       # 데이터베이스 관련 파일
+  - static/                   # 정적 파일
+    - css/                    # CSS 파일
+    - js/                     # JavaScript 파일
+  - templates/                # Django 템플릿
+    - base.html               # 기본 템플릿
+    - home.html               # 홈페이지 템플릿
+    - memos/                  # 메모 관련 템플릿
+      - memo_confirm_delete.html
+      - memo_detail.html
+      - memo_form.html
+      - memo_list.html
+    - users/                  # 사용자 관련 템플릿
+      - login.html
+      - register.html
 
 	
 # 일반 코딩 지침
@@ -103,4 +99,4 @@ Django 기반의 메모장 웹 애플리케이션
 - 코드의 보안 취약점을 점검하고 개선 방안을 제안합니다.
 - 입력값 검증, 하드코딩된 비밀번호/시크릿, 취약한 암호화/해시 알고리즘 사용, 인증/인가 누락, 민감 정보 로그 출력, 외부 라이브러리 취약점 등을 점검합니다.
 - 발견된 취약점에 대해 상세 설명과 구체적인 개선 방법을 제안합니다.
-- 모든 답변은 한국어로 작성합니다.	
+- 모든 답변은 한국어로 작성합니다.
