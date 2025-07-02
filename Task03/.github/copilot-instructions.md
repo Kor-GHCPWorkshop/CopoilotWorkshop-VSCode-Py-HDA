@@ -2,39 +2,87 @@
 applyTo: "**"
 --- -->
 
-# K-pop 음악 대장
-http://localhost:5000 에서 실행되고 있는 API를 사용해 K-pop 음악 순위를 표시
-음악 정보(순위, 노래제목, 작곡가, 가수, 앨범 사진) 표시
+# 메모짱
+Django 기반의 메모장 웹 애플리케이션
 
-- Javascript와 React사용
+주요 기능
+- 사용자 로그인 및 회원가입.
+- 메모 작성, 수정, 삭제.
+- 메모 목록 조회.
 
-- 주요 컴포넌트
-    ChartList: 순위 목록을 표시하는 컴포넌트
-    SongCard: 개별 곡 정보를 표시하는 카드 컴포넌트
-    Header: 앱 제목 표시
 
-- 웹 페이지 & API end-point
-  - Home: K-pop음악대장 제목, 각 페이지 (멜론 탑100, 벅스 탑100, 지니 탑200) 링크
-  - 멜론 탑100 페이지 : /v1/melon/music/chart/100 
-  - 벅스 탑100 페이지 : /v1/bugs/music/chart/100
-  - 지니 탑200 페이지 : /v1/genie/music/chart/200
+
+# 구성요소 Stack
+
+- 프론트엔드
+   - Django 템플릿 엔진: HTML, CSS, JavaScript를 사용하여 간단한 UI 구현.
+   - Bootstrap (선택 사항): 빠르고 반응형 UI를 위해 사용.
+
+- 백엔드
+   - Django Framework: 웹 애플리케이션의 핵심 로직과 API 제공.
+   - Django Forms: 메모 작성 및 수정 폼 처리.
+
+- 데이터베이스
+   - SQLite: 개발 단계에서 간단히 사용할 수 있는 기본 데이터베이스.
+
+- 사용자 인증
+   - Django 내장 인증 시스템: 사용자 로그인, 로그아웃, 회원가입 기능 제공.
+
+- 세션 관리
+    - Django의 기본 세션 관리 기능 사용.
+
+- 배포
+    - 개발 단계: Django의 내장 개발 서버 사용.
+    - 프로덕션: Gunicorn + Nginx (선택 사항).
+
+- 추가 라이브러리
+    - django-crispy-forms (선택 사항): 폼 스타일링을 간편하게 하기 위해 사용.
+
 
 - 디렉토리 구조
   - .github/
   - docs/
-  - src/
-	- components/
-	  - ChartList.js
-	  - SongCard.js
-	  - Header.js
-	- pages/
-	  - Home.js
-	  - MelonTop100.js
-	  - BugsTop100.js
-	  - GenieTop200.js
-	- App.js
-	- index.js
-
+  - memojjang/                      # 메인 Django 프로젝트
+    ├── apps/                       # Django 앱들
+    │   ├── __init__.py
+    │   ├── __pycache__/
+    │   │
+    │   ├── memos/                  # 메모 앱
+    │   │   ├── __init__.py
+    │   │   ├── admin.py            # 관리자 설정
+    │   │   ├── apps.py             # 앱 설정
+    │   │   ├── models.py           # 데이터 모델
+    │   │   ├── views.py            # 뷰 로직
+    │   │   ├── tests.py            # 테스트
+    │   │   ├── migrations/         # 데이터베이스 마이그레이션
+    │   │   └── __pycache__/
+    │   │
+    │   └── users/                  # 사용자 앱
+    │       ├── __init__.py
+    │       ├── admin.py            # 관리자 설정
+    │       ├── apps.py             # 앱 설정
+    │       ├── models.py           # 데이터 모델
+    │       ├── views.py            # 뷰 로직
+    │       ├── tests.py            # 테스트
+    │       ├── migrations/         # 데이터베이스 마이그레이션
+    │       └── __pycache__/
+  - ├── db/                         # 데이터베이스 관련 파일
+    │
+    ├── static/                     # 정적 파일
+    │   ├── css/                    # CSS 파일
+    │   └── js/                     # JavaScript 파일
+    │
+    └── templates/                  # Django 템플릿
+        ├── base.html               # 기본 템플릿
+        ├── home.html               # 홈페이지 템플릿
+        ├── memos/                  # 메모 관련 템플릿
+        │   ├── memo_confirm_delete.html
+        │   ├── memo_detail.html
+        │   ├── memo_form.html
+        │   └── memo_list.html
+        └── users/                  # 사용자 관련 템플릿
+            ├── login.html
+            └── register.html
 
 	
 # 일반 코딩 지침
@@ -49,6 +97,7 @@ http://localhost:5000 에서 실행되고 있는 API를 사용해 K-pop 음악 �
 8. 불변성(immutability)을 지키는 코드를 작성할 것
 9. PR(풀리퀘스트)에는 변경 요약 및 테스트 방법을 반드시 포함할 것
 10. 코드 리뷰에서 발견된 개선점은 즉시 반영할 것
+
 
 # 보안 점검 지침
 - 코드의 보안 취약점을 점검하고 개선 방안을 제안합니다.

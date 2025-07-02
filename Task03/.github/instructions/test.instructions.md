@@ -1,85 +1,16 @@
----
-applyTo: "**/*.test.js"
----
 
 
-## **테스트 프레임워크**
-- **Jest**: JavaScript 테스트 프레임워크로, React 및 Node.js 애플리케이션에 적합합니다.
+- **Django Test Framework**: Django의 내장 테스트 프레임워크를 사용합니다.
 
----
-
-## **테스트 코드 작성 지침**
-
-### **1. 테스트 파일 구조**
-- 테스트 파일은 소스 코드와 동일한 디렉토리 구조를 따르며, 파일 이름에 `.test.js` 또는 `.spec.js`를 추가합니다.
-  - 예: `user.js` → `user.test.js`
-- 모든 테스트 파일은 `/tests` 디렉토리에 저장합니다.
-
-
----
-
-### **3. 테스트 작성 규칙**
-- **Given-When-Then 패턴**을 따릅니다:
-  - **Given**: 테스트의 초기 상태를 설정합니다.
-  - **When**: 테스트할 동작을 실행합니다.
-  - **Then**: 예상 결과를 검증합니다.
-
-```javascript
-describe('User Model', () => {
-  it('should create a new user', async () => {
-    // Given
-    const userData = { name: 'John', email: 'john@example.com' };
-
-    // When
-    const user = await User.create(userData);
-
-    // Then
-    expect(user.name).toBe('John');
-    expect(user.email).toBe('john@example.com');
-  });
-});
-```
-
----
-
-### **4. 테스트 스타일**
-- **독립적 테스트**: 각 테스트는 다른 테스트에 의존하지 않아야 합니다.
-- **명확한 설명**: `describe`와 `it` 블록에 테스트의 목적을 명확히 작성합니다.
-- **모의(Mock) 객체 사용**: 외부 API 호출이나 데이터베이스 작업은 모의 객체를 사용하여 테스트합니다.
-
----
-
-### **5. React 컴포넌트 테스트**
-- **React Testing Library**를 사용하여 컴포넌트의 렌더링 및 동작을 테스트합니다.
-- **Jest Mock**을 사용하여 API 호출을 모의합니다.
-
-```javascript
-import { render, screen, fireEvent } from '@testing-library/react';
-import UserForm from '../components/UserForm';
-
-test('renders the user form and submits data', () => {
-  render(<UserForm />);
-
-  // Input fields
-  const nameInput = screen.getByLabelText(/name/i);
-  const emailInput = screen.getByLabelText(/email/i);
-
-  // Fill out the form
-  fireEvent.change(nameInput, { target: { value: 'John' } });
-  fireEvent.change(emailInput, { target: { value: 'john@example.com' } });
-
-  // Submit the form
-  const submitButton = screen.getByRole('button', { name: /submit/i });
-  fireEvent.click(submitButton);
-
-  // Assertions
-  expect(screen.getByText(/user created successfully/i)).toBeInTheDocument();
-});
-```
-
----
-
-### **6. 테스트 실행**
-- 테스트는 `npm test` 명령어로 실행합니다.
-- `package.json`에 스크립트를 추가합니다:
-
+## **테스트 코드 작성 규칙**
+- **테스트 함수 이름**: `test_`로 시작해야 하며, 테스트하는 기능을 설명하는 이름을 사용합니다.
+- **테스트 클래스 이름**: `Test`로 시작하며, 테스트하는 기능을 설명하는 이름을 사용합니다.
+- **테스트 메서드 이름**: `test_`로 시작해야 하며, 테스트하는 기능을 설명하는 이름을 사용합니다.
+- **assert 문**: 테스트의 결과를 검증하기 위해 assert 문을 사용합니다.
+- **setUp 및 tearDown 메서드**: 테스트 전후에 필요한 초기화 및 정리 작업을 수행하기 위해 setUp 및 tearDown 메서드를 사용합니다.
+- **주석 및 문서화**: 테스트 코드에 주석을 추가하여 테스트의 목적과 동작을 설명합니다. 필요에 따라 docstring을 사용하여 테스트 클래스 및 메서드에 대한 설명을 추가합니다.
+- **테스트 데이터**: 테스트에 필요한 데이터는 테스트 메서드 내에서 생성하거나 setUp 메서드에서 초기화합니다.
+- **테스트 독립성**: 각 테스트는 독립적으로 실행되어야 하며, 다른 테스트에 영향을 주지 않도록 합니다.
+- **테스트 실행**: 테스트는 `unittest` 모듈을 사용하여 실행합니다. 테스트 파일을 직접 실행하거나, 테스트 스위트를 만들어 실행할 수 있습니다.
+- **테스트 결과 출력**: 테스트 실행 결과는 `unittest` 모듈의 기본 출력 형식을 사용하여 출력합니다. 필요에 따라 커스터마이징할 수 있습니다.
+- **예외 처리**: 테스트에서 예외가 발생할 것으로 예상되는 경우, `assertRaises` 메서드를 사용하여 예외를 검증합니다.
