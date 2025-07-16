@@ -29,7 +29,7 @@
 
 ## Step 1: GitHub MCP Server를 통해 자동으로 GitHub 저장소에 Issue 등록하기
 * 이 Step의 실습은 선택 사항입니다. (GitHub.com 활용이 불가능한 환경이면, 이 Step은 건너뜁니다.)
-- 앞선 Task3에서 'Plan'모드를 통해 확인 한 프로젝트 빌드 절차를 확인합니다.
+- 앞선 Task3에서 'Plan'모드를 통해 확인 한 프로젝트 빌드 절차를 확인합니다. <br>
  <img src="img/01.png" width="400"> <br>
  <img src="img/02.png" width="400"> <br>
  <img src="img/03.png" width="400"> <br>

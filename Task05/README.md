@@ -58,7 +58,7 @@
 
 - 첫번째 방법'/' 을 통해 `/test` Prompt파일을 선택 한 뒤, 아래 예시와 같은 방법을 통해 프롬프트 파일을 실행합니다. <br>
   - `/test #changes` 
-  - `/test #githubRepo pull request #14`
+  - `/test #githubRepo pull request #14` <br>
   <img src="img/02.png" width="400"> <br>
   <img src="img/03.png" width="400"> <br>
 
