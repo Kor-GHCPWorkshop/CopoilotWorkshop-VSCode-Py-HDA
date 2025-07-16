@@ -135,12 +135,12 @@
   <img src="img/35.png" width="400"> <br>
 
 - GitHub.com 저장소에 Draft PR이 생성되며, 자동으로 Copilot(Coding Agent)이 기능을 구현하고 있는 것을 확인합니다. <br>
-  <img src="img/36.png" width="400"> <br>
-  <img src="img/37.png" width="400"> <br>
+  <img src="img/36.png" width="600"> <br>
+  <img src="img/37.png" width="600"> <br>
 
 - Pull Request가 생성되면, Copilot이 자동으로 코드 리뷰를 진행합니다. <br>
-  <img src="img/38.png" width="400"> <br>
-  <img src="img/39.png" width="400"> <br>
+  <img src="img/38.png" width="600"> <br>
+  <img src="img/39.png" width="600"> <br>
 
   - 수동으로 Copilot을 Reviewer로 추가할 수 있습니다. <br>
   <img src="img/40.png" width="400"> <br>
@@ -158,11 +158,11 @@
   <img src="img/46.png" width="400"> <br>
 
 - 다시 Pull Request 화면으로 돌아가면, Copilot이 해당 변경 요청에 대해 작업을 시작한 것을 확인할 수 있습니다. <br>
-  <img src="img/47.png" width="400"> <br>
-  <img src="img/48.png" width="400"> <br>
+  <img src="img/47.png" width="600"> <br>
+  <img src="img/48.png" width="600"> <br>
 
 - 변경이 완료되면 아래와 같이 변경 내용이 완료된 커맨트를 볼 수 있습니다. <br>
-  <img src="img/49.png" width="400"> <br>
+  <img src="img/49.png" width="600"> <br>
 
   - `Files changed` 탭에서 해당 리뷰 부분에서 'Resolve comment' 버튼을 클릭하여, 리뷰를 완료합니다. <br>
   <img src="img/50.png" width="400"> <br>
@@ -170,7 +170,7 @@
 - Pull Request를 Merge하여, 기능을 완료합니다. <br>
 
 - PR Merge 후, main branch를 개발 랩탑에 clone하고, 서버를 다시 실행하여 추가된 범주 기능이 정상적으로 동작하는지 확인합니다. <br>
-  <img src="img/51.png" width="400"> <br>
+  <img src="img/51.png" width="600"> <br>
 
 ## 지식 확인
 - Standard Model과 Premium Model의 차이, Premium 모델 사용시 기본 제공되는 사용량 
