@@ -1,156 +1,176 @@
 # Task 4: Django 웹앱 만들기 (Part 2) 
 
 ## Use case: 
-- Part 1에서 생성된 Django 웹앱에 Copilot을 활용해 모델을 생성하고, Copilot Edit기능을 사용해 템플릿 뷰에 내용을 신속하게 추가하면서 나머지 기능을 구현하며, 추가적인 컨텍스트를 제공하거나, CLI에서의 Copilot을 활용하는 등등 다양한 기능을 활용합니다.
+- 이전 Task03(Part 1)에서 생성된 커스텀 instructions와 커스텀 Chat mode를 활용하여 Django 웹앱을 실제로 빌드합니다. 
+- (선택사항) GitHub.com이 활용 가능한 경우, 커스텀 모드인 Plan 모드를 사용해 Planning된 내용을, GitHub MCP Server를 활용하여, Copilot Chat에서 GitHub 저장소에 Issue를 등록해 봅니다.  
+- (선택사항) GitHub.com이 활용 가능한 경우, Coding Agent를 활용해 기능을 구현해 봅니다. (프리미엄 리퀘스트 사용)
+  - Copilot을 통해 자동 코드 리뷰를 받는 구성을 하고, Copilot 자동 Code Review를 통해 코드 리뷰를 받아 봅니다. (프리미엄 리퀘스트 사용)
 
 ## 목표: 
-- 에러 해결을 위해 Copilot에게 다양한 컨텍스트 추가 방법을 익힙니다. #terminalSelection, #file, #selection
+- 모델 사용시, Standard Model과 Premium Model의 차이, Premium 모델 사용시 기본 제공되는 사용량을 이해니다. 
+- Agent 모드를 활용해 프로젝트를 생성해 봅니다.
+- (선택사항) GitHub MCP Server를 활용하여, Copilot Chat에서 GitHub 저장소에 Issue를 등록하는 방법을 익힙니다. (* GitHub.com 활용 불가시 Skip)
+- (선택사항) Coding Agent를 활용해 기능을 구현해 봅니다. (프리미엄 리퀘스트 사용)
+- (선택사항) Copilot을 통해 자동 코드 리뷰를 받는 구성을 하고, Copilot 자동 Code Review를 통해 코드 리뷰를 받아 봅니다. (프리미엄 리퀘스트 사용)
 
-- CLI 명령어 창에서 Copilot을 활용하는 방법을 익힙니다.
-- Copilot Edit을 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다.
-- prompt 파일을 생성하여, Copilot Edit 모드를 활용해 여러개 템플릿 파일을 동시에 생성하는 방법을 실습합니다. 
+## Standard Model과 Premium Model의 차이
+- Standard Model은 무제한 사용 가능합니다.
+- Premium Model은 기본 제공되는 사용량이 있으며, 추가 사용시 비용이 발생합니다. 
+  - GitHub Copilot Business 라이센스와 GitHub Copilot Enterprise 라이센스에서 기본 제공되는 사용량에 차이가 있습니다. 
+  - [GitHub Copilot Plan별 비교표](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/plans-for-github-copilot#comparing-copilot-plans)
 
-## Step 1: User 모델 생성
+- Premium Model은, 각 모델마다 서로 다른 '가중치'가 부여됩니다. [모델별 가중치 테이블 설명 링크](https://docs.github.com/en/enterprise-cloud@latest/copilot/concepts/copilot-billing/understanding-and-managing-requests-in-copilot) 참조
 
-- `python manage.py runserver` 명령을 통해 개발 서버를 실행 합니다. <br>
-  <img src="img/01.png" width="800"> <br>
+- Premium Model의 기본 사용량 소진 시, Standard Model로 전환됩니다. 
+- 코드 자동 완성 기능은 Premium 모델과 무관하게 무제한 사용 가능합니다. 
+- 기업 관리자에 의한 설정이 가능합니다. 
+  - default로 기업 구성원들의 Premium Model에 대한 추가 사용은 비활성화되어 있습니다.
+  - 기업 관리자가 설정을 변경하여, 구성원들이 Premium Model을 사용할 수 있도록 할 수 있습니다. (한도 설정 가능)
 
-  - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br> 
-    <img src="img/02.png" width="800"> <br>
-    <img src="img/03.png" width="400"> <br>
-    <img src="img/04.png" width="500">
-
-- `users/models.py` 파일을 열고, Copilot chat에 요청하여 모델을 정의 합니다. <br>
-    <img src="img/18.png" width="200">
-    <img src="img/19.png" width="200">
-
-   * 혹, 불필요한 부분이 제안되었다면 삭제합니다. (닉네임, 이미지등)
-
-- `settings.py` 파일에 다음을 추가합니다. <br>
-    <img src="img/20.png" width="300">
-
-- 모델 정의 후, Copilot이 제안해 준, 이어지는 과정을 진행하기 위해 별도 CLI터미널을 실행합니다. <br>
-    <img src="img/10.png" width="200">
-
-- venv를 실행합니다. <br>
-    <img src="img/11.png" width="600">
-
-- `python manage.py makemigrations users` 명령어를 실행합니다. <br>
-    <img src="img/21.png" width="700">
-
-- `python manage.py migrate` 명령어를 실행합니다. <br>
-    <img src="img/22.png" width="500">
-
-  * Copilot이 제안해준 명령어에 마우스를 위치하면, `'Insert into terminal`'을 통해 실행할 수도 있습니다. <br>
-    <img src="img/13.png" width="400">
-
-- Admin페이지에 모델을 등록하기 위해 `admin.py` 파일을 열고, 모델을 등록합니다. <br>
-    <img src="img/23.png" width="500"> <br>
-
-## Step 2: 슈퍼 유저 생성하기
-- CLI 터미널에서 Ctrl + i를 입력하고, Copilot 창에에 `superuser를 생성` 라고 입력합니다. 
-  <img src="img/24.png" width="700">
-  <img src="img/25.png" width="500">
-   - `Insert into terminal` 혹은 `copy` 버튼을 활용합니다. 
-
-- `python manage.py createsuperuser` 명령어를 통해해 슈퍼 유저를 생성합니다. <br>
-  <img src="img/26.png" width="900">
+## Step 1: GitHub MCP Server를 통해 자동으로 GitHub 저장소에 Issue 등록하기
+* 이 Step의 실습은 선택 사항입니다. (GitHub.com 활용이 불가능한 환경이면, 이 Step은 건너뜁니다.)
+- 앞선 Task3에서 'Plan'모드를 통해 확인 한 프로젝트 빌드 절차를 확인합니다.
+ <img src="img/01.png" width="400"> <br>
+ <img src="img/02.png" width="400"> <br>
+ <img src="img/03.png" width="400"> <br>
 
 
-## Step 3: Memos 모델 생성
-- 개발 서버는 계속 실행 중인 상태에서 진행합니다. <br>
+- 위 절차를 GitHub 저장소에 '일감'(이슈)으로 등록하기 위해, Copilot Chat에서 'Agent' 모드를 선택하고, 아래와 같이 요청합니다. 
+  - `위 각 구현단계를 각각 현재 워크스페이스의 origin 리모트 저장소에 이슈로 등록해줘`
+  - 위와 같이 요청하면, Copilot Chat이 GitHub MCP Server를 통해 자동으로 GitHub 저장소에 Issue를 등록합니다.
+   <img src="img/04.png" width="400"> <br>
+   <img src="img/05.png" width="400"> <br>
 
-- `memos/models.py` 파일을 열고, Copilot chat에 요청하여 모델을 정의 합니다. <br>
-    <img src="img/05.png" width="400"> <br>
-    <img src="img/06.png" width="400"> 
-    <img src="img/08.png" width="300">
+- GitHub 저장소에서 생성된 Issue를 확인합니다. <br>
+   <img src="img/06.png" width="400"> <br>
 
-- `python manage.py makemigrations` 명령어를 실행합니다. <br>
-    <img src="img/12.png" width="600">
-    
-- `python manage.py migrate` 명령어를 실행합니다. <br>
-    <img src="img/14.png" width="500">
 
-- 관리자 페이지에 모델을 등록하기 위해 `memos`디렉토리의 `admin.py` 파일을 열고, 모델을 등록합니다. <br>
-  <img src="img/15.png" width="100"> 
-      <img src="img/09.png" width="500"> 
+## Step 2: Copilot Agent 모드에서 프로젝트 생성하기 
+### 2-1. GitHub.com이 활용 가능한 경우
+- Copilot Chat에서 `Agent` 모드를 선택하고, 아래와 같이 요청합니다. <br>
+  - `자, 이제 이 프로젝트의 구현을 시작하자. 현재 워크 스페이스에서 위에서 제시된 각 단계별로 구현을 진행해 줘. 단계별로 완료된 내용을 GitHub의 origin 리모트 저장소에 해당 이슈에 커맨트하고 해당 이슈를 close 해 줘.`
 
-- localhost:8000/admin/으로 접속하여, 관리자 계정으로 로그인합니다. <br>
-    <img src="img/16.png" width="300">
+  <img src="img/07.png" width="400"> <br>
+  <img src="img/08.png" width="400"> <br>
+  <img src="img/09.png" width="400"> <br>
+  <img src="img/10.png" width="400"> <br>
+  <img src="img/11.png" width="400"> <br>
 
-- 등록된 모델을 확인합니다. <br>
-    <img src="img/17.png" width="300">
+
+- GitHub.com 저장소에 이슈들도 확인 합니다. <b>
+  <img src="img/12.png" width="400"> <br>
+  <img src="img/13.png" width="400"> <br>
+
+  - Agent 모드가 진행과정에서 에러가 발생하면, 스스로 에러를 수정합니다. <br> 
+	<img src="img/14.png" width="500"> <br>
+	<img src="img/15.png" width="500"> <br>
+	- 에러가 수정되었습니다. <br>
+	<img src="img/16.png" width="500"> <br>
+	<img src="img/17.png" width="500"> <br>
+
+- 만약 진행 과정에서 아래와 같이 중단되면, 다시 진행 하라고 요청합니다. <br>
+  <img src="img/18.png" width="400"> <br>
+  <img src="img/19.png" width="400"> <br>
+
+- Agent 모드가 프로젝트 구성을 완료하고, 테스트도 실행하여 확인합니다. <br>
+  <img src="img/20.png" width="400"> <br>
+  <img src="img/21.png" width="400"> <br>
+  <img src="img/22.png" width="400"> <br>
+  <img src="img/23.png" width="400"> <br>
+- 프로젝트를 실행하여 정상적으로 동작하는지 확인합니다. <br>
+  <img src="img/24.png" width="400"> <br>
+  <img src="img/25.png" width="400"> <br>
+  <img src="img/26.png" width="400"> <br>
+  
 
 - `Ctrl + Shift + P`를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>
 
+### 2-2. GitHub.com이 활용 불가능한 경우
+- Copilot Chat에서 `Agent` 모드를 선택하고, 아래와 같이 요청합니다. 
+  - `자, 이제 이 프로젝트의 구현을 시작하자. 현재 워크 스페이스에서 위에서 제시된 각 단계별로 구현을 진행해 줘. 단계별로 완료된 내용을 커밋하고, 커밋 메시지를 작성해 줘.`
+  - 위와 같이 요청하면, Copilot Chat이 Agent 모드로 자동으로 프로젝트를 구현합니다. 
 
-## Step 4 : 이후 과정 질문하기
+- 프로젝트를 실행하여 정상적으로 동작하는지 확인합니다. <br>
 
-- `@workspace`를 활용해, Copilot에게 이후 프로젝트를 완성하기 위해 어떤 과정이 남았는지 확인합니다. <br>
-    <img src="img/27.png" width="500">
-    <img src="img/28.png" width="400">
+## (선택사항) Step 3: Copilot을 통해 자동 코드 리뷰 받기
+### 3-1 Code Review 룰 설정하기
+- 이 기능은 GitHub Enterprise (혹은 Team) 플랜을 사용하는 저장소에서 가능한 기능이며, `Premium 리퀘스트`가 사용되는 기능입니다.
+- 아래 Step 5 진행에 앞서, Copilot을 통해 자동 코드 리뷰를 받는 구성을 하고, Copilot 자동 Code Review를 통해 코드 리뷰를 받도록 구성합니다. 
+- 현재 작업중이 워크 스페이스의 리모트 저장소인, GitHub.com상의 저장소로 이동하여, 저장소의 Settings로 이동합니다. <br>
+- Settings 메뉴에서 왼편의 `Rues > Rulesets` 메뉴를 선택합니다. <br>
+  <img src="img/28.png" width="400"> <br>
+- Ruleset 메뉴에서 `New ruleset - New branch ruleset` 버튼을 클릭합니다. <br>
+  <img src="img/29.png" width="400"> <br>
+- Enforcement Status를 '`Active`'로 설정합니다. <br>
+  <img src="img/30.png" width="400"> <br>
+- Target branches 의 `Add target > Include default branch`를 선택합니다. <br>
+  <img src="img/31.png" width="400"> <br>
+- Rules에서 `Require a pull request before merging`를 선택하고, `Request pull request review from Copilot` 을 선택합니다. <br>
+  <img src="img/32.png" width="400"> <br>
+- `Save changes` 버튼을 클릭하여 저장합니다. <br>
 
-## Step 5: Prompt파일 생성 - Copilot Edit을 통해 URL 패턴, 뷰, 템플릿 동시에 생성하기
+### 3-2. Review guideline 설정하기
+- 저장소 settings에서 왼편의 `Copilot > Code review` 메뉴를 선택합니다. <br>
+  <img src="img/41.png" width="400"> <br>
+  - 기본적으로 copilot-instructions.md 파일을 참조합니다. 
+- Create guideline 버튼을 클릭하여, Copilot이 코드 리뷰를 수행할 때 참고할 guideline을 작성합니다. <br>
+  <img src="img/42.png" width="400"> <br>
 
-- **[Prompt 파일 이란?](https://code.visualstudio.com/docs/copilot/copilot-customization#_reusable-prompt-files-experimental)**
-  - Prompt 파일은 재사용 가능한 프롬프트 지시문을 Markdown 형식으로 저장해, Copilot에 손쉽게 추가 맥락을 제공할 수 있도록 도와줍니다. 예컨대 특정 아키텍처 요건, 코드 스타일 등을 이 파일에 정리해두면, 반복적인 지시사항 없이도 채팅 창에서 손쉽게 불러와 의도된 코드를 빠르게 생성할 수 있습니다.
-  - Use cases:
-    - 코드 생성(Code generation): 컴포넌트, 테스트, 마이그레이션 등을 재사용 가능한 프롬프트로 만들어, 예를 들어 React 폼이나 API 목업을 간편히 생성.
-    - 도메인 전문 지식(Domain expertise): 보안 정책이나 컴플라이언스 확인처럼 특화된 지식을 프롬프트로 공유.
-    - 팀 협업(Team collaboration): 문서나 사양을 참조해 패턴과 가이드라인을 기록.
-    - 온보딩(Onboarding): 복잡한 프로세스나 프로젝트별 패턴을 단계별로 안내하는 가이드를 생성.
+## (선택사항) Step 4: Coding Agent를 활용해 기능 추가하기
+- GitHub.com이 활용 가능한 경우, Copilot Chat에서 아래의 요청을 통해 Coding Agent를 활용해 기능을 추가해 봅니다. 
+- VS Code에서 GitHub Pull Requests 확장 프로그램을 설치합니다. <br>
+- Copilot Chat에서 `Ask` 모드를 선택하고, 아래와 같이 요청합니다.
+ 
+  ```
+  #copilotCodingAgent 자, 이제 새로운 기능을 추가하려고 한다. 현재 워크스페이스의 origin 리모트 저장소에 아래의 기능을 구현하기 위한 PR을 생성해줘.
+  - 메모 범주 기능을 추가해 줘. 
+  - 범주는 '일상', '업무', '개인'으로 나눈다. 
+  - 메모 생성시 범주를 선택할 수 있도록 하고, 범주를 선택하지 않는다면 비워 둔다. 
+  - 범주가 선택되지 않고 생성된 메모에 나중에 범주를 추가할 수 있도록 한다. 
+  - 범주별로 메모를 필터링할 수 있도록 해 줘.
+  ```
+  <img src="img/33.png" width="400"> <br>
+  <img src="img/34.png" width="400"> <br>
+  <img src="img/35.png" width="400"> <br>
+- GitHub.com 저장소에 Draft PR이 생성되며, 자동으로 Copilot(Coding Agent)이 기능을 구현하고 있는 것을 확인합니다.
+  <img src="img/36.png" width="400"> <br>
+  <img src="img/37.png" width="400"> <br>
 
-- VS Code의 설정에서 Prompt Files 부분을 확인합니다. <br>
-    <img src="img/29.png" width="500">
+- Pull Request가 생성되면, Copilot이 자동으로 코드 리뷰를 진행합니다. <br>
+  <img src="img/38.png" width="400"> <br>
+  <img src="img/39.png" width="400"> <br>
 
-- default 위치인 .github/prompts 디렉토리를 생성합니다. <br>
-    <img src="img/30.png" width="300">
+  - 수동으로 Copilot을 Reviewer로 추가할 수 있습니다. <br>
+  <img src="img/40.png" width="400"> <br>
 
-- 위 디렉토리내에 template.prompt.md 파일을 생성하고, 예시로 주어진 `promptExample/` 디렉토리의 `template.prompt.md` 파일의 내용을 붙여 넣습니다다. <br>
-    <img src="img/31.png" width="300">
+### 4-1. Copilot review된 부분 다시 Copilot에게 수정 요청하기
 
+- Copilot이 리뷰한 부분을 다시 Copilot에게 수정 요청할 수 있습니다.
+- Pull Request에서 `Files changed` 탭을 선택하고, Copilot이 리뷰한 부분을 확인합니다. <br>
+  <img src="img/43.png" width="400"> <br>
+  - 파일 옆에 말풍선 모양 아이콘이 있는 부분이 Copilot이 리뷰한 부분입니다.
+  - 해당 Review 커맨트에, 원하는 수정사항을 입력하고 `Start a review` 버튼을 클릭합니다. <br>
+  <img src="img/44.png" width="400"> <br>
+  - 우측 상단에 `Submit review` 버튼을 클릭하고, `Request Changes` 버튼을 눌러 리뷰를 제출합니다. <br>
+  <img src="img/45.png" width="400"> <br>
+  <img src="img/46.png" width="400"> <br>
 
-- Copilot Edit으로 이동합니다. <br>
-    <img src="img/32.png" width="400">
+- 다시 Pull Request 화면으로 돌아가면, Copilot이 해당 변경 요청에 대해 작업을 시작한 것을 확인할 수 있습니다. <br>
+  <img src="img/47.png" width="400"> <br>
+  <img src="img/48.png" width="400"> <br>
 
-- [Prompt files를 실행하는 방법](https://code.visualstudio.com/updates/v1_100#_prompt-files)은 3가지가 있습니다. <br>
-	- Copilot Chat에서 '`/`'를 입력하고 Prompt파일 선택. <br>
-	- Prompt 파일을 열고 우측 상단의 'Play' 버튼을 클릭합니다. <br>
-	- Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Chat: Run Prompt File..`을 선택합니다. <br>
+- 변경이 완료되면 아래와 같이 변경 내용이 완료된 커맨트를 볼 수 있습니다. <br>
+  <img src="img/49.png" width="400"> <br>
 
-- 첫번째 방법'/' 을 통해 Prompt파일을 선택 한 뒤, Chat에 아래와 같이 입력합니다. (클립 버튼을 클릭하여 'memojjang' 디렉토리 선택) <br> 
-   - `memojjang 프로젝트의 URL패턴, 뷰, 템플릿을 구성해줘`
+  - `Files changed` 탭에서 해당 리뷰 부분에서 'Resolve comment' 버튼을 클릭하여, 리뷰를 완료합니다. <br>
+  <img src="img/50.png" width="400"> <br>
 
-- Copilot Edit이 파일들을 완성합니다. <br>
-    <img src="img/38.png" width="600">
-
-- **Keep**을 클릭하여 생성된 내용을 유지합니다. <br>
-
-- 추가로 필요한 내용들을 요청하여 구성합니다. <br>
-    <img src="img/39.png" width="900">
-- 생성된 파일들을 확인하고, Keep 하여 유지합니다. 그리고 파일들을 저장합니다. <br>
-    <img src="img/40.png" width="600">
-    <img src="img/41.png" width="500">
-
-- CLI터미널에서 `Ctrl + i`를 입력하고, Copilot 창에 '`django bootstrap 5 설치`' 명령어를 요구합니다. <br>
-    <img src="img/44.png" width="600"> <br>
-    <img src="img/45.png" width="500">
-
-    - run을 실행하여 bootstrap 5를 설치하고, settings.py에 내용을 추가합니다 . <br>
-    <img src="img/46.png" width="300">
-
-- 터미널에서 python manage.py migrate 명령어를 실행합니다. <br>
-    <img src="img/47.png" width="600">
-    - 만약 아래와 같이 에러가 발생하면, `#terminalLastCommand`를 통해 에러 수정을 요청합니다. <br>
-
-- localhost:8000 으로 접속하여 프로젝트를 확인합니다. <br>
-    <img src="img/48.png" width="700">
-
-- 프로젝트를 실행해 보고, 다른 에러가 발생하면, Copilot Edit에게 다양한 프롬프트로 질문하면서, 다양한 컨텍스트를 (#codebase, #file, #selection, #terminalSelection, @workspace) 제공하여 해결하는 실습을 진행해 봅니다. <br>
-
+- 서버를 다시 실행하여 추가된 범주 기능이 정상적으로 동작하는지 확인합니다. <br>
+  <img src="img/51.png" width="400"> <br>
 
 ## 지식 확인
-- 다양한 컨텍스트 추가 방법 
-- CLI 명령어 창에서 Copilot을 활용
-- Copilot Edit의 동작 방식식
-- prompt 파일 
+- Standard Model과 Premium Model의 차이, Premium 모델 사용시 기본 제공되는 사용량 
+- (선택사항) GitHub MCP Server를 활용해 Copilot Chat에서 GitHub 저장소에 Issue를 등록하는 방법
+- (선택사항) Coding Agent를 활용해 기능을 구현하는 방법 
+- (선택사항) Copilot을 통해 자동 코드 리뷰를 받는 방법
+

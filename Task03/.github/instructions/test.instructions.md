@@ -1,4 +1,6 @@
-
+---
+applyTo: "**/test_*.py"
+---
 
 - **Django Test Framework**: Django의 내장 테스트 프레임워크를 사용합니다.
 

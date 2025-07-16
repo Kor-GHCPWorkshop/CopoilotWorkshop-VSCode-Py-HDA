@@ -31,6 +31,7 @@
 
 ### MCP 서버의 예시
   - [MCP 서버 예시](https://mcpservers.org/) 
+  - [Smithery](https://smithery.ai/)
   - [MCP server repository](https://github.com/modelcontextprotocol/servers) <br>
   - [MCP.so](https://mcp.so/)
 
@@ -158,6 +159,20 @@
 	```
  - 'start' 버튼을 클릭하여 MCP 서버를 시작합니다.
 
+
+## Step 6: Atlassian MCP 서버와 연결하기
+- Atlassian MCP 서버를 설정하여, Jira와 Confluence와 같은 Atlassian 제품과 통합할 수 있습니다.
+- Atlassian에서 제공하는 MCP서버는 Remote MCP 서버로 설정할 수 있습니다.(https://www.atlassian.com/platform/remote-mcp-server)
+- 로컬에서 도커로 실행가능한, https://github.com/sooperset/mcp-atlassian 의 MCP서버를 설정할 수 있습니다. 
+  - 위 저장소의 README 파일을 참고하여, MCP 서버를 설정합니다.
+  - 1. Authentication Setup : B. Personal Access Token (Server/Data Center)
+  - 2. Installation : docker 설치
+
+  - 3. 사용가능한 Tool 확인
+    - `confluence_search`: Search Confluence content using CQL
+	- `confluence_get_page`: Get content of a specific page
+	- `confluence_create_page`: Create a new page
+	- `confluence_update_page`: Update an existing page
 
 ## 지식 확인
 - MCP의 구조와 기능, 연결 방법은 어떤 것들이 있습니까?
