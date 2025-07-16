@@ -161,7 +161,7 @@
 ## Step 5: GitHub MCP Server 설정하기
 - MCP Server에 대한 설명은 [Task 8](../Task08/README.md)에서 자세히 다룹니다.
 - 현재 Task에서는 GitHub MCP Server를 설정하여, Copilot Chat에서 GitHub MCP Server를 이용해, GitHub 저장소에 Issue를 등록할 수 있도록 합니다. <br>
-- GitHub MCP Server(https://github.com/github/github-mcp-server)는 GitHub에서 제공하는 공식 MCP 서버로, GitHub.com의 각종 다양한 기능을 제공합니다. <br>
+- GitHub MCP Server(https://github.com/github/github-mcp-server) 는 GitHub에서 제공하는 공식 MCP 서버로, GitHub.com의 각종 다양한 기능을 제공합니다. <br>
 - GitHub MCP Server를 추가하기 위해 위 링크의 저장소에서 'Remote GitHub MCP Server'하단에 `VS Code: Install Server` 버튼을 클릭합니다. <br>
  <img src="img/44.png" width="400"> <br>
 
@@ -169,6 +169,9 @@
 - 추가된 GitHub MCP Server를 확인하기 위해, Agent 모드의 도구 모양 아이콘을 클릭하여 도구 목록을 확인합니다. <br>
   <img src="img/45.png" width="400"> <br>
   <img src="img/46.png" width="400"> <br>
+
+- 온프렘 설치형 GitHub Enterprise Server를 사용하는 경우, 아래링크의 설명 방법으로 MCP 서버를 설정할 수 있습니다. <br>
+  - [GitHub Enterprise Server에서 MCP 서버 설정](https://github.com/github/github-mcp-server#github-enterprise-server-and-enterprise-cloud-with-data-residency-ghecom) <br>
 
 ## Step 6: 저장
 - Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>

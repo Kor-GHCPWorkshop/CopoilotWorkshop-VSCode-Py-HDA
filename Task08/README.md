@@ -165,10 +165,10 @@
 - Atlassian에서 제공하는 MCP서버는 Remote MCP 서버로 설정할 수 있습니다.(https://www.atlassian.com/platform/remote-mcp-server)
 - 로컬에서 도커로 실행가능한, https://github.com/sooperset/mcp-atlassian 의 MCP서버를 설정할 수 있습니다. 
   - 위 저장소의 README 파일을 참고하여, MCP 서버를 설정합니다.
-  - 1. Authentication Setup : B. Personal Access Token (Server/Data Center)
-  - 2. Installation : docker 설치
+  - Authentication Setup : B. Personal Access Token (Server/Data Center)
+  - Installation : docker 설치
 
-  - 3. 사용가능한 Tool 확인
+  - 사용가능한 Tool 확인
     - `confluence_search`: Search Confluence content using CQL
 	- `confluence_get_page`: Get content of a specific page
 	- `confluence_create_page`: Create a new page

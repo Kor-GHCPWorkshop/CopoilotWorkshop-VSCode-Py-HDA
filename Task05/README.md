@@ -28,15 +28,15 @@
 
 ### 프롬프트 파일 구조
 - 메타데이터 헤더
-- `mode`: 프롬프트 파일에 대한 간단한 설명입니다. 이 설명은 프롬프트 입력 필드의 자리 표시자 텍스트로 표시되며, 프롬프트 파일 드롭다운 목록에서 해당 프롬프트 위에 마우스를 올릴 때 표시됩니다.
-- `model`: 프롬프트를 실행할 때 사용할 AI 모델입니다. 지정하지 않으면 모델 선택기에서 현재 선택된 모델이 사용됩니다.
-- `tools`: Agent모드에서 사용할 수 있는 도구 또는 도구 세트의 목록입니다. 여기에는 기본 제공 도구, 도구 세트, MCP 도구 또는 확장 프로그램에서 제공하는 도구가 포함될 수 있습니다. 먼저, Agent모드의 '도구모양 아이콘'(Configure Tools)에서 사용할 도구들을 선택합니다. 프롬프트 파일을 실행할 때, 프롬프트 파일내에 지정된 도구가 Configure Tools에서 지정되어 있지 않다면, 해당 도구는 무시됩니다. 
-- `description`: 프롬프트에 대한 설명.
+  - `mode`: 프롬프트 파일에 대한 간단한 설명입니다. 이 설명은 프롬프트 입력 필드의 자리 표시자 텍스트로 표시되며, 프롬프트 파일 드롭다운 목록에서 해당 프롬프트 위에 마우스를 올릴 때 표시됩니다.
+  - `model`: 프롬프트를 실행할 때 사용할 AI 모델입니다. 지정하지 않으면 모델 선택기에서 현재 선택된 모델이 사용됩니다.
+  - `tools`: Agent모드에서 사용할 수 있는 도구 또는 도구 세트의 목록입니다. 여기에는 기본 제공 도구, 도구 세트, MCP 도구 또는 확장 프로그램에서 제공하는 도구가 포함될 수 있습니다. 먼저, Agent모드의 '도구모양 아이콘'(Configure Tools)에서 사용할 도구들을 선택합니다. 프롬프트 파일을 실행할 때, 프롬프트 파일내에 지정된 도구가 Configure Tools에서 지정되어 있지 않다면, 해당 도구는 무시됩니다. 
+  - `description`: 프롬프트에 대한 설명.
 
 - Body with prompt content
-- 프롬프트 파일은 채팅에서 작성 프롬프트의 형식을 모방합니다. 이를 통해 자연어 지침, 추가 컨텍스트를 혼합하거나 다른 프롬프트 파일을 종속성으로 연결할 수 있습니다. Markdown 형식을 사용하여 프롬프트 콘텐츠를 구조화할 수 있으며, 여기에는 제목, 목록, 코드 블록 등이 포함됩니다.
-- 워크스페이스 파일, 프롬프트 파일, 또는 지침 파일을 Markdown 링크를 사용하여 참조할 수 있습니다. 이러한 파일을 참조할 때는 상대 경로를 사용하고, 프롬프트 파일의 위치를 기준으로 경로가 올바른지 확인해야 합니다.
-- 프롬프트 파일 내에서, `${variableName}` syntax를 활용해 다양한 변수들을 참조할 수 있습니다. :
+  - 프롬프트 파일은 채팅에서 작성 프롬프트의 형식을 모방합니다. 이를 통해 자연어 지침, 추가 컨텍스트를 혼합하거나 다른 프롬프트 파일을 종속성으로 연결할 수 있습니다. Markdown 형식을 사용하여 프롬프트 콘텐츠를 구조화할 수 있으며, 여기에는 제목, 목록, 코드 블록 등이 포함됩니다.
+  - 워크스페이스 파일, 프롬프트 파일, 또는 지침 파일을 Markdown 링크를 사용하여 참조할 수 있습니다. 이러한 파일을 참조할 때는 상대 경로를 사용하고, 프롬프트 파일의 위치를 기준으로 경로가 올바른지 확인해야 합니다.
+  - 프롬프트 파일 내에서, `${variableName}` syntax를 활용해 다양한 변수들을 참조할 수 있습니다. :
 
 	- Workspace variables - ${workspaceFolder}, ${workspaceFolderBasename}
 	- Selection variables - ${selection}, ${selectedText}
@@ -106,7 +106,7 @@
 
 - Chat participant는 사용자의 채팅 프롬프트를 해결하기 위해 LLM이 호출하는 언어 모델 도구와는 다릅니다. Chat participant는 사용자의 프롬프트를 받아 직접 필요한 작업을 오케스트레이션합니다.
 
-- VS Code에서 특정 extension을 설치하면, 해당 extension에 대한 Chat participant가 추가될 수 있습니다. 예를 들어, `@mermaid-chart`는 Mermaid Chart 확장 프로그램에서 제공하는 Chat participant입니다.
+- VS Code에서 특정 extension을 설치하면, 해당 extension에 대한 Chat participant가 추가될 수 있습니다. 예를 들어, `@mermaid-chart`는 Mermaid Chart 확장 프로그램에서 제공하는 Chat participant입니다. <br>
   <img src="img/10.png" width="600"> <br>
   <img src="img/11.png" width="400"> <br>
 
@@ -132,34 +132,34 @@
 - Chat variables는 채팅창에 입력하는 프롬프트 문장 중간에 사용할 수 있습니다. 
 
 - 예시: 코드 changes 
-  - "#changes 내용을 요약해줘"
-  - "#changes를 기반으로
+  - `#changes 내용을 요약해줘`
+  - `#changes를 기반으로 릴리즈 노트를 작성해줘`
 
 - 예시 : 코드베이스에 대해 질문하기
-  - "#codebase에서 인증(authentication)이 어떻게 동작하는지 설명해줘"
-  - "#codebase에서 데이터베이스 연결 문자열이 어디에 설정되어 있는지 알려줘"
-  - "#codebase를 어떻게 빌드하는지 알려줘"
-  - "#getUser가 어디에서 사용되는지 #usages로 알려줘"
+  - `#codebase에서 인증(authentication)이 어떻게 동작하는지 설명해줘`
+  - `#codebase에서 데이터베이스 연결 문자열이 어디에 설정되어 있는지 알려줘`
+  - `#codebase를 어떻게 빌드하는지 알려줘`
+  - `#getUser가 어디에서 사용되는지 #usages로 알려줘`
 
 - 예시: 현재 코드베이스에 일관된 코드 생성하기
-  - "소개 페이지를 만들고 네비게이션 바에 포함해줘 #codebase"
-  - "주소 정보를 업데이트하는 새로운 API 경로를 추가해줘 #codebase"
-  - "로그인 버튼을 추가하고 #styles.css를 참고해서 스타일을
+  - `소개 페이지를 만들고 네비게이션 바에 포함해줘 #codebase`
+  - `주소 정보를 업데이트하는 새로운 API 경로를 추가해줘 #codebase`
+  - `로그인 버튼을 추가하고 #styles.css를 참고해서 스타일을 적용해줘`
 
 - 예시: 워크스페이스에 문제점 해결하기
-  - "#problems에 있는 문제들을 해결해줘"
-  - "#testFailure에서 실패하는 테스트들을 해결해줘
+  - `#problems에 있는 문제들을 해결해줘`
+  - `#testFailure에서 실패하는 테스트들을 해결해줘`
 
 - 예시: Extension에 대한 정보 얻기
-  - "이 워크스페이스에서 가장 많이 사용되는 #extensions은 무엇인가요?"
+  - `이 워크스페이스에서 가장 많이 사용되는 #extensions은 무엇인가요?`
 
 - 예시: 웹사이트 참조하여 질문하기 
-  - "react 18에서 'useState' 훅을 어떻게 사용하는지 알려줘 #fetch https://18.react.dev/reference/react/useState#usage"
-  - "주소 정보를 가져오는 API 엔드포인트를 만들어줘. #githubRepo contoso/api-templates의 템플릿을 사용해줘"
+  - `react 18에서 'useState' 훅을 어떻게 사용하는지 알려줘 #fetch https://18.react.dev/reference/react/useState#usage`
+  - `주소 정보를 가져오는 API 엔드포인트를 만들어줘. #githubRepo contoso/api-templates의 템플릿을 사용해줘`
 
 - 예시: 실행된 터미널 명령어 결과에 대한 질문하기
-  - "#terminalSelection의 내용 설명해줘"
-  - "@workspace /fix #terminalLastCommand"
+  - `#terminalSelection의 내용 설명해줘`
+  - `@workspace /fix #terminalLastCommand`
 
 - [전체 Chat Variable 목록](https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features#_chat-variables) 
 
@@ -181,15 +181,12 @@
    <img src="img/15.png" width="400"> <br>
 
    ** Git이 초기화되지 않은 경우, 'initialize repository'를 클릭하여 Git을 초기화합니다. <br>
-   <img src="img/16.png" width="400"> <br>
+   <img src="img/16.png" width="300"> <br>
 
 
- - Message 입력란 우측에 'sparkle' 아이콘을 클릭합니다다. <br>
-   <img src="img/17.png" width="500"> <br>
+ - Message 입력란 우측에 'sparkle' 아이콘을 클릭하고, 제안되는 commit message 내용들을 확인합니다.. <br>
+   <img src="img/17.png" width="400"> <br>
  
-  - 제안되는 commit message 내용들을 확인합니다. <br>
-   <img src="img/18.png" width="500">
-
 
 ## 추가자료
 - [Prompt engineering for Copilot Chat](https://code.visualstudio.com/docs/copilot/chat/prompt-crafting)
