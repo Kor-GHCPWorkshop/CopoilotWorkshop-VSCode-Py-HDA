@@ -47,6 +47,10 @@
 
 ## Step 2: Copilot Agent 모드에서 프로젝트 생성하기 
 ### 2-1. GitHub.com이 활용 가능한 경우
+- 앞선 Task3에서 'Plan'모드를 통해 확인 한 프로젝트 빌드 절차를 확인합니다. <br>
+ <img src="img/01.png" width="400"> <br>
+ <img src="img/02.png" width="400"> <br>
+ <img src="img/03.png" width="400"> <br>
 - Copilot Chat에서 `Agent` 모드를 선택하고, 아래와 같이 요청합니다. <br>
   - `자, 이제 이 프로젝트의 구현을 시작하자. 현재 워크 스페이스에서 위에서 제시된 각 단계별로 구현을 진행해 줘. 단계별로 완료된 내용을 GitHub의 origin 리모트 저장소에 해당 이슈에 커맨트하고 해당 이슈를 close 해 줘.`
 
