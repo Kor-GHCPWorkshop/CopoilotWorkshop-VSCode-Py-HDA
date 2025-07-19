@@ -1,5 +1,5 @@
 ---
-applyTo: "**/*.sqlite3"
+applyTo: "**/*.sqlite3, *.sql"
 ---
 
 # Database

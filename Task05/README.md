@@ -4,18 +4,16 @@
 - Prompt 파일에 대해 알아보고, 프롬프트 파일을 생성하여 테스트 코드 및 보안 점검에 활용해 봅니다. 
 - 효율적인 프롬프트 작성과 컨텍스트 활용 방법을 익힙니다. 
 - Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. 
-- CLI 명령어 창에서 Copilot을 활용하는 방법을 익힙니다.
 - Copilot을 활용해 Commit message를 자동 생성합니다.
 
 ## 목표:
 - prompt 파일을 생성하여, 활용 방법을 실습합니다.
 - 효율적인 프롬프트 작성과 컨텍스트 활용을 통해 Copilot을 활용하는 방법을 익힙니다.
 - Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. 
-- CLI 명령어 창에서 Copilot을 활용하는 방법을 익힙니다.
 - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
 
 
-## Step 1: Prompt파일로 테스트 코드 생성, 보안 확인 
+## Step 1: 프롬프트 파일 - 재활용 가능한 프롬프트 지시 
 
 - **[Prompt 파일 이란?](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental)**
   - 프롬프트 파일은 `.prompt.md` 확장자를 가진 Markdown 파일로 정의되며, 코드 생성이나 코드 리뷰 수행과 같은 일반적인 작업을 위한 재사용 가능한 프롬프트입니다. 프롬프트 파일은 독립적인 프롬프트로, 채팅에서 직접 실행할 수 있습니다. 선택적으로 작업 수행 방법에 대한 지침을 포함할 수도 있습니다.
@@ -104,8 +102,30 @@
 
 - VS Code에는 `@vscode`, `@terminal`, `@workspace`와 같은 여러 내장된 채팅 참가자가 있습니다. 이들은 각자의 도메인에 대한 질문에 최적화되어 있습니다.
 
-- Chat participant는 사용자의 채팅 프롬프트를 해결하기 위해 LLM이 호출하는 언어 모델 도구와는 다릅니다. Chat participant는 사용자의 프롬프트를 받아 직접 필요한 작업을 오케스트레이션합니다.
+### 참고 @workspace
+- `@workspace`는 Ask 모드에서 사용자가 질문한 내용에 대해 전체 코드베이스에서 관련된 파일들과 심볼들을 검색하고, 이것들을 답변에 참조합니다.  
+  - [VS Code @workspace 설명문서](https://code.visualstudio.com/docs/copilot/reference/workspace-context)
 
+  - @worspace는 
+    - 먼저, @workspace는 사용자 질문에 답변하는 데 필요한 정보를 파악합니다. 여기에는 대화 기록, 작업 공간 구조, 현재 선택된 코드 등이 포함됩니다.
+
+    - 다음으로, 다양한 방법으로 컨텍스트를 수집합니다. 로컬 검색이나 GitHub 코드 검색을 통해 관련 코드 조각을 찾거나, VS Code의 언어 IntelliSense를 활용하여 함수 시그니처, 매개변수 등의 세부 정보를 추가합니다.
+
+    - 마지막으로, 이 컨텍스트는 GitHub Copilot이 질문에 답변하는 데 사용됩니다. 컨텍스트가 너무 크면 가장 관련성 높은 부분만 사용됩니다. 응답에는 파일, 파일 범위, 심볼에 대한 참조가 표시됩니다. 이를 통해 채팅 응답에서 코드베이스의 해당 정보로 직접 연결할 수 있습니다. Copilot에 제공된 코드 조각은 응답의 참조로 나열됩니다.
+	
+  - `@workspace`가 사용하는 소스
+	- .gitignore file내에 정의된 파일을 제외한, 워크 스페이스 내 모든 [indexable files](https://code.visualstudio.com/docs/copilot/reference/workspace-context#_what-content-is-included-in-the-workspace-index)  
+	- 하위 폴더를 포함한 디렉토리 구조와 파일 이름 
+	- GitHub 리포지토리와 연결된 경우 GitHub의 code search index
+	- 워크스페이스 내 Symbols 과 definitions 
+	- 현재 선택된 텍스트, 또는 활성화된 에디터의 보여지는 텍스트 부분 
+
+  - `@workspace`를 활용하면, 
+    - 코드 검색
+	- 복잡한 코드 편집에 대한 플래닝
+	- 코드 베이스의 구조나 기능 구현된 것에 대한 상위 수준의 질문
+
+### Extension에서 제공하는 Chat participant
 - VS Code에서 특정 extension을 설치하면, 해당 extension에 대한 Chat participant가 추가될 수 있습니다. 예를 들어, `@mermaid-chart`는 Mermaid Chart 확장 프로그램에서 제공하는 Chat participant입니다. <br>
   <img src="img/10.png" width="600"> <br>
   <img src="img/11.png" width="400"> <br>

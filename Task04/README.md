@@ -50,6 +50,12 @@
 - Copilot Chat에서 `Agent` 모드를 선택하고, 아래와 같이 요청합니다. <br>
   - `자, 이제 이 프로젝트의 구현을 시작하자. 현재 워크 스페이스에서 위에서 제시된 각 단계별로 구현을 진행해 줘. 단계별로 완료된 내용을 GitHub의 origin 리모트 저장소에 해당 이슈에 커맨트하고 해당 이슈를 close 해 줘.`
 
+### 2-2. GitHub.com이 활용 불가능한 경우
+- Copilot Chat에서 `Agent` 모드를 선택하고, 아래와 같이 요청합니다. 
+  - `자, 이제 이 프로젝트의 구현을 시작하자. 현재 워크 스페이스에서 위에서 제시된 각 단계별로 구현을 진행해 줘. 단계별로 완료된 내용을 커밋하고, 커밋 메시지를 작성해 줘.`
+
+- 위와 같이 요청하면, Copilot Chat이 Agent 모드로 자동으로 프로젝트를 구현합니다. 
+
   <img src="img/07.png" width="400"> <br>
   <img src="img/08.png" width="400"> <br>
   <img src="img/09.png" width="400"> <br>
@@ -78,6 +84,7 @@
   <img src="img/21.png" width="400"> <br>
   <img src="img/22.png" width="400"> <br>
   <img src="img/23.png" width="400"> <br>
+
 - 프로젝트를 실행하여 정상적으로 동작하는지 확인합니다. <br>
   <img src="img/24.png" width="400"> <br>
   <img src="img/25.png" width="400"> <br>
@@ -85,13 +92,6 @@
   
 
 - `Ctrl + Shift + P`를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>
-
-### 2-2. GitHub.com이 활용 불가능한 경우
-- Copilot Chat에서 `Agent` 모드를 선택하고, 아래와 같이 요청합니다. 
-  - `자, 이제 이 프로젝트의 구현을 시작하자. 현재 워크 스페이스에서 위에서 제시된 각 단계별로 구현을 진행해 줘. 단계별로 완료된 내용을 커밋하고, 커밋 메시지를 작성해 줘.`
-  - 위와 같이 요청하면, Copilot Chat이 Agent 모드로 자동으로 프로젝트를 구현합니다. 
-
-- 프로젝트를 실행하여 정상적으로 동작하는지 확인합니다. <br>
 
 ## (선택사항) Step 3: Copilot을 통해 자동 코드 리뷰 받기
 ### 3-1 Code Review 룰 설정하기
