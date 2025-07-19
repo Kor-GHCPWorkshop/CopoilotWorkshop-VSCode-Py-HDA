@@ -12,6 +12,9 @@
 
 
 ## Step 1: Custom instructions 생성
+ - [Custom instructions 설명](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/custom-instructions/adding-repository-custom-instructions-for-github-copilot?versionId=enterprise-cloud%40latest&tool=jetbrains#about-repository-custom-instructions-for-github-copilot-chat)
+ - 팀의 작업 방식, 사용하는 도구, 프로젝트의 세부 사항에 대한 충분한 컨텍스트를 제공하면 GitHub Copilot은 이에 맞춘 챗 응답을 생성할 수 있습니다. 이러한 컨텍스트 정보를 매번 챗 질문에 반복해서 추가하는 대신, 저장소에 파일을 생성하여 자동으로 이 정보를 추가할 수 있습니다. 추가된 정보는 챗에 표시되지는 않지만, Copilot이 더 높은 품질의 응답을 생성하는 데 활용됩니다.
+
  - **[Custom instructions란](https://code.visualstudio.com/docs/copilot/copilot-customization)** 
     - 일반적인 가이드라인이나 규칙을 정의하여 코드 생성, 코드 리뷰 수행, 또는 커밋 메시지 생성과 같은 작업을 수행합니다. Custom instructions는 AI가 작업을 수행해야 하는 조건(작업이 어떻게 수행되어야 하는지)을 설명합니다.
     - Custom instructions는 다양한 형태로 작성할 수 있습니다. <br>
@@ -78,22 +81,18 @@
 
 	  - [설정예시](https://code.visualstudio.com/docs/copilot/copilot-customization#_specify-custom-instructions-in-settings) <br>
 
-## Step 2: Custom instructions 파일 생성, 수정하기 
-- Custom instructions를 생성하기 위해, Copilot Chat창의 우측 상단에 톱니 바퀴 아이콘을 클릭하여 설정 메뉴를 엽니다. <br>
-	<img src="img/35.png" width="400"> <br>
-	<img src="img/36.png" width="400"> <br>
-	<img src="img/37.png" width="400"> <br>
 
-- 예제로 제공된 현재 디렉토리의 `.github/instructions` 디렉토리의 파일을 복사하여 활용합니다. <br>
+## Step 2: Custom instructions 작성법 및 권고 
+- 프로젝트의 목적, 기능에 대한 상위 수준의 정의
+- 기술 스택, 사용되는 (선호하는) 라이브러리와 프레임 워크 and frameworks
+- 프로젝트 구조 및 파일 구성
+- 코드 스타일 및 컨벤션
+- 주석 및 문서화 스타일
+- 디자인 패턴 및 아키텍처 원칙
+- 테스트 전략 및 프레임워크 
+- 보안 및 성능 고려 사항
 
-- 현재의 custom instructions 파일을 수정하려면, Copilot Chat창의 우측 상단에 톱니 바퀴 아이콘을 클릭하고, 수정을 원하는 파일을 선택합니다. <br>
-	<img src="img/38.png" width="500"> <br>
-
-## 기존 프로젝트에 custom instructions 적용하기
-- Copilot Chat창의 우측 상단에 톱니 바퀴 아이콘을 클릭하고, `Generate Instructions`를 선택합니다. <br>
-	<img src="img/39.png" width="200"> <br>
-
-## Custom instructions 생성에 대한 팁
+### 2-1. Custom instructions 생성에 대한 팁
 - [설명링크](https://code.visualstudio.com/docs/copilot/copilot-customization#_tips-for-defining-custom-instructions)
 
 - 지침은 간결하고 독립적으로 작성하세요. 각 지침은 하나의 간단한 문장이어야 합니다. 여러 정보를 제공해야 하는 경우, 여러 개의 지침으로 나누어 작성하세요.
@@ -109,7 +108,24 @@
 - 프롬프트 파일에서 사용자 정의 지침을 참조하여 프롬프트를 깔끔하고 집중되게 유지하고, 다른 작업에 대해 지침을 중복 작성하지 않도록 하세요.
 
 
-## Step 3: 커스텀 Chat Mode 설정하기 
+## Step 3: Custom instructions 파일 생성, 수정하기 
+- Custom instructions를 생성하기 위해, Copilot Chat창의 우측 상단에 톱니 바퀴 아이콘을 클릭하여 설정 메뉴를 엽니다. <br>
+	<img src="img/35.png" width="400"> <br>
+	<img src="img/36.png" width="400"> <br>
+	<img src="img/37.png" width="400"> <br>
+
+- 예제로 제공된 현재 디렉토리의 `.github/instructions` 디렉토리의 파일을 복사하여 활용합니다. <br>
+
+- 현재의 custom instructions 파일을 수정하려면, Copilot Chat창의 우측 상단에 톱니 바퀴 아이콘을 클릭하고, 수정을 원하는 파일을 선택합니다. <br>
+	<img src="img/38.png" width="500"> <br>
+
+### 3-1. 기존 프로젝트에서 custom instructions 생성하기
+- Copilot Chat창의 우측 상단에 톱니 바퀴 아이콘을 클릭하고, `Generate Instructions`를 선택합니다. <br>
+	<img src="img/39.png" width="200"> <br>
+
+
+
+## Step 4: 커스텀 Chat Mode 설정하기 
 - Copilot Chat Mode를 설정하기 전, Copilot Chat의 기본 3가지 모드를 확인해 봅니다. <br>
 
 | 챗 모드 | 설명  |
@@ -122,7 +138,7 @@
 - [VS code 설명링크](https://code.visualstudio.com/docs/copilot/chat/chat-modes)
 - 커스텀 챗 모드는 `.chatmode.md`라는 Markdown 파일로 정의되며, 워크스페이스에 저장하여 다른 사람들이 사용할 수 있도록 하거나 사용자 프로필에 저장하여 다양한 워크스페이스에서 재사용할 수 있습니다.
 
-### Chat mode 구조
+### 4-1. Chat mode 구조
    - 메타데이터 헤더
      - description: 챗 모드에 대한 간단한 설명입니다. 이 설명은 챗 입력 필드의 자리 표시자 텍스트로 표시되며, 챗 모드 드롭다운 목록에서 해당 모드 위에 마우스를 올릴 때 표시됩니다.
      - tools: 이 챗 모드에서 사용할 수 있는 도구 또는 도구 세트의 목록입니다. 여기에는 기본 제공 도구, 도구 세트, MCP 도구 또는 확장 프로그램에서 제공하는 도구가 포함될 수 있습니다. 사용 가능한 도구 목록에서 도구를 선택하려면 도구 구성 작업을 사용하십시오.
@@ -134,7 +150,7 @@
 
 - [Chat mode 파일 예시](https://code.visualstudio.com/docs/copilot/chat/chat-modes#_chat-mode-file-example) <br>
 
-### Chat mode 파일 생성 
+### 4-2. Chat mode 파일 생성 
   - 'Ctrl + Shift + P'를 눌러 명령어 팔레트를 열고, `Chat: New Mode File`를 선택합니다. <br>
   <img src="img/40.png" width="300"> <br>
 
@@ -143,14 +159,14 @@
 
 - 실습 디렉토리에 [plan.chatmode.md](.github/plan.chatmode.md) 파일의 내용을 참조하여 plan 모드를 생성합니다. <br>
 
-### 커스텀 Chat mode 실행
+### 4-3. 커스텀 Chat mode 실행
 - Copilot Chat에서 `Plan` 모드를 선택합니다. <br>
   <img src="img/42.png" width="200"> <br>
 
   - Plan 모드에서 `이 프로젝트를 구현하기 위한 세부 절차를 단계별로 제안해 줘`라고 요청합니다. <br>
 
 
-## Step 4: GitHub 저장소와 연동하기
+## (선택사항) Step 5: GitHub 저장소와 연동하기
 - 이 Step의 실습은 선택 사항입니다. (GitHub.com 활용이 불가능한 환경이면, 이 Step은 건너뜁니다.)
 - GitHub Enterprise 혹은, GitHub 개인 계정에 빈 저장소를 생성합니다. <br>
 - VS Code 왼편의 Git 아이콘을 클릭하고 , `Initialize Repository`를 클릭하여 Git 저장소를 초기화합니다. <br>
@@ -158,7 +174,7 @@
  <img src="img/43.png" width="400"> <br>
 
 
-## Step 5: GitHub MCP Server 설정하기
+## (선택사항) Step 6: GitHub MCP Server 설정하기
 - MCP Server에 대한 설명은 [Task 8](../Task08/README.md)에서 자세히 다룹니다.
 - 현재 Task에서는 GitHub MCP Server를 설정하여, Copilot Chat에서 GitHub MCP Server를 이용해, GitHub 저장소에 Issue를 등록할 수 있도록 합니다. <br>
 - GitHub MCP Server(https://github.com/github/github-mcp-server) 는 GitHub에서 제공하는 공식 MCP 서버로, GitHub.com의 각종 다양한 기능을 제공합니다. <br>
@@ -173,7 +189,7 @@
 - 온프렘 설치형 GitHub Enterprise Server를 사용하는 경우, 아래링크의 설명 방법으로 MCP 서버를 설정할 수 있습니다. <br>
   - [GitHub Enterprise Server에서 MCP 서버 설정](https://github.com/github/github-mcp-server#github-enterprise-server-and-enterprise-cloud-with-data-residency-ghecom) <br>
 
-## Step 6: 저장
+## Step 7: 저장
 - Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `File: Save All Files`를 선택합니다. <br>
 
 ## 지식 확인
