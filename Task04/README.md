@@ -45,6 +45,9 @@
    <img src="img/04.png" width="400"> <br>
    <img src="img/05.png" width="400"> <br>
 
+- `Allow in this Workspace` 를 선택하여 자동으로 진행되도록 할 수 있습니다. <br>
+  <img src="img/05-1.png" width="400"> <br>
+
 - GitHub 저장소에서 생성된 Issue를 확인합니다. <br>
    <img src="img/06.png" width="400"> <br>
 
@@ -91,7 +94,7 @@
 - Copilot Chat에서 `Agent` 모드를 선택하고, 아래와 같이 요청합니다. <br>
   - `자, 이제 이 프로젝트의 구현을 시작하자. 현재 워크 스페이스에서 위에서 제시된 각 단계별로 구현을 진행해 줘. 단계별로 완료된 내용을 GitHub의 origin 리모트 저장소에 해당 이슈에 커맨트하고 해당 이슈를 close 해 줘.` <br>
 
-- MCP를 통해 GitHub.com 저장소에 이슈들이 자동으로 업데이트 되는 것 확인 합니다. <br>
+- MCP를 통해 GitHub.com 저장소에 이슈들이 자동으로 업데이트 되는 것을 확인합니다. <br>
   <img src="img/12.png" width="400"> <br>
   <img src="img/13.png" width="400"> <br>
 
