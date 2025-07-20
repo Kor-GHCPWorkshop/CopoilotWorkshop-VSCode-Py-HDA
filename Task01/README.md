@@ -82,6 +82,18 @@
 
 - Reference : [VS Code Copilot settings reference 문서](https://code.visualstudio.com/docs/copilot/copilot-settings)
 
+## Step 5: Copilot Log 확인하기
+- VS Code 하단 터미널 창에서 `OUTPUT` 을 클릭합니다. <br>
+  <img src = "img/25.png" width = "400">
+- GitHub Copilot 혹은 GitHub Copilot Chat 을 선택해 로그를 확인합니다. <br>
+  <img src = "img/26.png" width = "400">
+  <img src = "img/27.png" width = "400">
+
+## 참고 : Copilot 관련 기술 지원
+- [GitHub 도움말 : Troubleshoot GitHub Copilot 문서 참조](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/troubleshoot)
+
+- (기업 관리자)각종 에러로그, 화면 캡쳐 등을 첨부하여 GitHub 글로벌 Support에 기술지원 요청/문의할 수 있습니다. <br>
+  - [GitHub Support](https://support.github.com)
 
 ## 지식 확인
 - GitHub Copilot의 코드 완성 기능
