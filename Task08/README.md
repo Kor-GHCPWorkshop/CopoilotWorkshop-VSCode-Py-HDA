@@ -166,7 +166,36 @@
 - 로컬에서 도커로 실행가능한, https://github.com/sooperset/mcp-atlassian 의 MCP서버를 설정할 수 있습니다. 
   - 위 저장소의 README 파일을 참고하여, MCP 서버를 설정합니다.
   - Authentication Setup : B. Personal Access Token (Server/Data Center)
-  - Installation : docker 설치
+  - Installation : docker 설치 <br>
+
+  ```json
+  "mcp-atlassian": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "CONFLUENCE_URL",
+        "-e", "CONFLUENCE_USERNAME",
+        "-e", "CONFLUENCE_API_TOKEN",
+        "-e", "JIRA_URL",
+        "-e", "JIRA_USERNAME",
+        "-e", "JIRA_API_TOKEN",
+        "ghcr.io/sooperset/mcp-atlassian:latest"
+      ],
+      "env": {
+        "CONFLUENCE_URL": "https://your-company.atlassian.net/wiki",
+        "CONFLUENCE_USERNAME": "your.email@company.com",
+        "CONFLUENCE_API_TOKEN": "your_confluence_api_token",
+        "JIRA_URL": "https://your-company.atlassian.net",
+        "JIRA_USERNAME": "your.email@company.com",
+        "JIRA_API_TOKEN": "your_jira_api_token"
+      }
+    }
+  ```
+<br>
+<img src="./img/17.png" width="700"> <br>
+<img src="./img/18.png" width="700"> <br>
 
   - 사용가능한 Tool 확인
     - `confluence_search`: Search Confluence content using CQL
