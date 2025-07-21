@@ -27,6 +27,11 @@
   - default로 기업 구성원들의 Premium Model에 대한 추가 사용은 비활성화되어 있습니다.
   - 기업 관리자가 설정을 변경하여, 구성원들이 Premium Model을 사용할 수 있도록 할 수 있습니다. (한도 설정 가능)
 
+### 현재 Premium request 사용량 확인하기
+- VS Code 하단의 `Copilot` 아이콘을 클릭하고, `Usage`부분에서 확인합니다. <br>
+  <img src="img/52.png" width="400"> <br>
+
+
 ## Step 1: Copilot에게 프로젝트 구성 절차 요청하기
 - Copilot Chat에서 `Plan` 모드를 선택합니다. <br>
   <img src="img/01-1.png" width="200"> <br>
