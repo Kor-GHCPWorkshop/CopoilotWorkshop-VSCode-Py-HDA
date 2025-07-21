@@ -12,59 +12,24 @@
 - Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. 
 - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
 
+## Step 1: GitHub Copilot Chat에서 지원하는 프롬프트 유형
+GitHub Copilot Chat은 다양한 코딩 관련 프롬프트를 처리하여 대화형 코딩 도우미로서의 다재다능함을 보여줍니다. 다음은 몇 가지 일반적인 입력 형식입니다.
 
-## Step 1: 프롬프트 파일 - 재활용 가능한 프롬프트 지시 
+- 직접 질문: 
+  - 코딩 개념, 라이브러리 또는 문제 해결에 대한 구체적인 질문을 할 수 있습니다. 
+  - (예) "`Python에서 빠른 정렬 알고리즘을 구현하려면 어떻게 해?`" 
+  - (예) "`React 구성 요소가 렌더링되지 않는 이유는 뭐야?`"
+- 코드 관련 요청: 
+  - 코드 생성, 수정 또는 설명을 요청할 수 있습니다. 
+  - (예): "`인수를 계산하는 함수 작성`", "`내 코드에서 이 오류 수정`", 또는 "`이 코드 조각 설명`"
 
-- **[Prompt 파일 이란?](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental)**
-  - 프롬프트 파일은 `.prompt.md` 확장자를 가진 Markdown 파일로 정의되며, 코드 생성이나 코드 리뷰 수행과 같은 일반적인 작업을 위한 재사용 가능한 프롬프트입니다. 프롬프트 파일은 독립적인 프롬프트로, 채팅에서 직접 실행할 수 있습니다. 선택적으로 작업 수행 방법에 대한 지침을 포함할 수도 있습니다.
+- 개방형 쿼리: 
+  - 코딩 개념을 탐색하거나, 개방형 질문을 하여 일반적인 지침을 찾을 수 있습니다. 
+  - (예)"`클린 코드 작성에 대한 모범 사례는 뭐야?`" 또는 "`Python 애플리케이션의 성능을 향상시키려면 어떻게 해야 해?`"
 
-  - 프롬프트 파일은 instruction 파일을 활용하여 일반적인 가이드를 재사용하고 작업별 지침을 프롬프트에 포함할 수 있습니다. 예를 들어, 보안 리뷰 프롬프트 파일은 일반적인 보안 관행을 설명하는 사용자 정의 지침을 참조하면서, 리뷰 결과를 보고하는 방법에 대한 특정 지침을 포함할 수 있습니다.
-
-### 프롬프트 파일 위치
-  - 프롬프트 파일은 `.github/prompts` 디렉토리 또는 사용자 지정에 의한 다른 디렉토리에 저장할 수 있습니다.
-  <img src="img/01.png" width="400">
-
-### 프롬프트 파일 구조
-- 메타데이터 헤더
-  - `mode`: 프롬프트 파일에 대한 간단한 설명입니다. 이 설명은 프롬프트 입력 필드의 자리 표시자 텍스트로 표시되며, 프롬프트 파일 드롭다운 목록에서 해당 프롬프트 위에 마우스를 올릴 때 표시됩니다.
-  - `model`: 프롬프트를 실행할 때 사용할 AI 모델입니다. 지정하지 않으면 모델 선택기에서 현재 선택된 모델이 사용됩니다.
-  - `tools`: Agent모드에서 사용할 수 있는 도구 또는 도구 세트의 목록입니다. 여기에는 기본 제공 도구, 도구 세트, MCP 도구 또는 확장 프로그램에서 제공하는 도구가 포함될 수 있습니다. 먼저, Agent모드의 '도구모양 아이콘'(Configure Tools)에서 사용할 도구들을 선택합니다. 프롬프트 파일을 실행할 때, 프롬프트 파일내에 지정된 도구가 Configure Tools에서 지정되어 있지 않다면, 해당 도구는 무시됩니다. 
-  - `description`: 프롬프트에 대한 설명.
-
-- Body with prompt content
-  - 프롬프트 파일은 채팅에서 작성 프롬프트의 형식을 모방합니다. 이를 통해 자연어 지침, 추가 컨텍스트를 혼합하거나 다른 프롬프트 파일을 종속성으로 연결할 수 있습니다. Markdown 형식을 사용하여 프롬프트 콘텐츠를 구조화할 수 있으며, 여기에는 제목, 목록, 코드 블록 등이 포함됩니다.
-  - 워크스페이스 파일, 프롬프트 파일, 또는 지침 파일을 Markdown 링크를 사용하여 참조할 수 있습니다. 이러한 파일을 참조할 때는 상대 경로를 사용하고, 프롬프트 파일의 위치를 기준으로 경로가 올바른지 확인해야 합니다.
-  - 프롬프트 파일 내에서, `${variableName}` syntax를 활용해 다양한 변수들을 참조할 수 있습니다. :
-
-	- Workspace variables - ${workspaceFolder}, ${workspaceFolderBasename}
-	- Selection variables - ${selection}, ${selectedText}
-	- File context variables - ${file}, ${fileBasename}, ${fileDirname}, ${fileBasenameNoExtension}
-	- Input variables - ${input:variableName}, ${input:variableName:placeholder} (pass values to the prompt from the chat input field)
-
-### 프롬프트 파일 예시
-  - [예시 링크](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-file-examples)
-
-### 프롬프트 파일 생성
-- 실습 프로젝트의 `.github/prompts` 디렉토리에 `test.prompt.md` , `security-check.prompt.md` 파일을 복사하여 활용합니다. <br>
-- 생성을 위해, Copilot Chat 우측 상단의 톱니 바퀴 버튼을 누르고 생성합니다. <br>
-
-### 프롬프트 파일 실행
-- [Prompt files를 실행하는 방법](https://code.visualstudio.com/updates/v1_100#_prompt-files)은 3가지가 있습니다. <br>
-	- Copilot Chat에서 '`/`'를 입력하고 Prompt파일 선택. <br>
-	- Prompt 파일을 열고 우측 상단의 'Play' 버튼을 클릭합니다. <br>
-	- Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Chat: Run Prompt File..`을 선택합니다. <br>
-
-- 첫번째 방법'/' 을 통해 `/test` Prompt파일을 선택 한 뒤, 아래 예시와 같은 방법을 통해 프롬프트 파일을 실행합니다. <br>
-  - `/test #changes` 
-  - `/test #githubRepo pull request #14` <br>
-  <img src="img/02.png" width="400"> <br>
-  <img src="img/03.png" width="400"> <br>
-
-- security-check 프롬프트 파일을 열고, 우측 상단에 'Play' 버튼을 클릭하여 실행합니다. <br>
-  <img src="img/04.png" width="400"> <br>
-  <img src="img/05.png" width="400"> <br>
-  <img src="img/06.png" width="400"> <br>
-  <img src="img/07.png" width="400"> <br>
+- 상황별 프롬프트: 
+  - 코드 조각을 제공하거나 특정 코딩 시나리오를 설명하여 맞춤형 지원을 요청할 수 있습니다. 
+  - (예) "`여기 내 코드의 일부가 있어. 개선 사항을 제안할 수 있어?`" 또는 "`웹 애플리케이션을 빌드하고 있어. 인증 흐름을 도와줄 수 있어?`"
 
 ## Step 2: 효율적인 Copilot 사용을 위한 팁 
 - Copilot에게 프롬프트(Chat의 질문, 코드의 주석 등)를 작성할 때는, 
@@ -183,8 +148,61 @@
 
 - [전체 Chat Variable 목록](https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features#_chat-variables) 
 
+## Step 6: 프롬프트 파일 - 재활용 가능한 프롬프트 지시 
 
-## Step 6: Commit message 자동 생성 (Custom instruction으로 원하는 형태로 제안받기)
+- **[Prompt 파일 이란?](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental)**
+  - 프롬프트 파일은 `.prompt.md` 확장자를 가진 Markdown 파일로 정의되며, 코드 생성이나 코드 리뷰 수행과 같은 일반적인 작업을 위한 재사용 가능한 프롬프트입니다. 프롬프트 파일은 독립적인 프롬프트로, 채팅에서 직접 실행할 수 있습니다. 선택적으로 작업 수행 방법에 대한 지침을 포함할 수도 있습니다.
+
+  - 프롬프트 파일은 instruction 파일을 활용하여 일반적인 가이드를 재사용하고 작업별 지침을 프롬프트에 포함할 수 있습니다. 예를 들어, 보안 리뷰 프롬프트 파일은 일반적인 보안 관행을 설명하는 사용자 정의 지침을 참조하면서, 리뷰 결과를 보고하는 방법에 대한 특정 지침을 포함할 수 있습니다.
+
+### 프롬프트 파일 위치
+  - 프롬프트 파일은 `.github/prompts` 디렉토리 또는 사용자 지정에 의한 다른 디렉토리에 저장할 수 있습니다.
+  <img src="img/01.png" width="400">
+
+### 프롬프트 파일 구조
+- 메타데이터 헤더
+  - `mode`: 프롬프트 파일에 대한 간단한 설명입니다. 이 설명은 프롬프트 입력 필드의 자리 표시자 텍스트로 표시되며, 프롬프트 파일 드롭다운 목록에서 해당 프롬프트 위에 마우스를 올릴 때 표시됩니다.
+  - `model`: 프롬프트를 실행할 때 사용할 AI 모델입니다. 지정하지 않으면 모델 선택기에서 현재 선택된 모델이 사용됩니다.
+  - `tools`: Agent모드에서 사용할 수 있는 도구 또는 도구 세트의 목록입니다. 여기에는 기본 제공 도구, 도구 세트, MCP 도구 또는 확장 프로그램에서 제공하는 도구가 포함될 수 있습니다. 먼저, Agent모드의 '도구모양 아이콘'(Configure Tools)에서 사용할 도구들을 선택합니다. 프롬프트 파일을 실행할 때, 프롬프트 파일내에 지정된 도구가 Configure Tools에서 지정되어 있지 않다면, 해당 도구는 무시됩니다. 
+  - `description`: 프롬프트에 대한 설명.
+
+- Body with prompt content
+  - 프롬프트 파일은 채팅에서 작성 프롬프트의 형식을 모방합니다. 이를 통해 자연어 지침, 추가 컨텍스트를 혼합하거나 다른 프롬프트 파일을 종속성으로 연결할 수 있습니다. Markdown 형식을 사용하여 프롬프트 콘텐츠를 구조화할 수 있으며, 여기에는 제목, 목록, 코드 블록 등이 포함됩니다.
+  - 워크스페이스 파일, 프롬프트 파일, 또는 지침 파일을 Markdown 링크를 사용하여 참조할 수 있습니다. 이러한 파일을 참조할 때는 상대 경로를 사용하고, 프롬프트 파일의 위치를 기준으로 경로가 올바른지 확인해야 합니다.
+  - 프롬프트 파일 내에서, `${variableName}` syntax를 활용해 다양한 변수들을 참조할 수 있습니다. :
+
+	- Workspace variables - ${workspaceFolder}, ${workspaceFolderBasename}
+	- Selection variables - ${selection}, ${selectedText}
+	- File context variables - ${file}, ${fileBasename}, ${fileDirname}, ${fileBasenameNoExtension}
+	- Input variables - ${input:variableName}, ${input:variableName:placeholder} (pass values to the prompt from the chat input field)
+
+### 프롬프트 파일 예시
+  - [예시 링크](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-file-examples)
+
+### 프롬프트 파일 생성
+- 실습 프로젝트의 `.github/prompts` 디렉토리에 `test.prompt.md` , `security-check.prompt.md` 파일을 복사하여 활용합니다. <br>
+- 생성을 위해, Copilot Chat 우측 상단의 톱니 바퀴 버튼을 누르고 생성합니다. <br>
+
+### 프롬프트 파일 실행
+- [Prompt files를 실행하는 방법](https://code.visualstudio.com/updates/v1_100#_prompt-files)은 3가지가 있습니다. <br>
+	- Copilot Chat에서 '`/`'를 입력하고 Prompt파일 선택. <br>
+	- Prompt 파일을 열고 우측 상단의 'Play' 버튼을 클릭합니다. <br>
+	- Ctrl + Shift + P를 눌러 명령어 팔레트를 열고, `Chat: Run Prompt File..`을 선택합니다. <br>
+
+- 첫번째 방법'/' 을 통해 `/test` Prompt파일을 선택 한 뒤, 아래 예시와 같은 방법을 통해 프롬프트 파일을 실행합니다. <br>
+  - `/test #changes` 
+  - `/test #githubRepo pull request #14` <br>
+  <img src="img/02.png" width="400"> <br>
+  <img src="img/03.png" width="400"> <br>
+
+- security-check 프롬프트 파일을 열고, 우측 상단에 'Play' 버튼을 클릭하여 실행합니다. <br>
+  <img src="img/04.png" width="400"> <br>
+  <img src="img/05.png" width="400"> <br>
+  <img src="img/06.png" width="400"> <br>
+  <img src="img/07.png" width="400"> <br>
+
+
+## Step 7: Commit message 자동 생성 (Custom instruction으로 원하는 형태로 제안받기)
  - .vscode/settings.json 파일을 열고 아래와 같이 입력합니다.  <br>
     ```json
     - "github.copilot.chat.commitMessageGeneration.instructions": [
