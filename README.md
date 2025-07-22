@@ -43,10 +43,9 @@
   - Copilot을 통해 자동 코드 리뷰를 받는 구성을 하고, Copilot 자동 Code Review를 통해 코드 리뷰를 받아 봅니다. (프리미엄 리퀘스트 사용)
 
 ## [Task 5](/Task05/README.md): 프롬프트와 컨텍스트 사용 
-- Prompt 파일에 대해 알아보고, 프롬프트 파일을 생성하여 테스트 코드 및 보안 점검에 활용해 봅니다. 
 - 효율적인 프롬프트 작성과 컨텍스트 활용 방법을 익힙니다. 
-- Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. 
-- CLI 명령어 창에서 Copilot을 활용하는 방법을 익힙니다.
+- Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. (Chat participant, Chat variable 등)
+- Prompt 파일에 대해 알아보고, 프롬프트 파일을 생성하여 테스트 코드 및 보안 점검에 활용해 봅니다. 
 - Copilot을 활용해 Commit message를 자동 생성합니다.
 
 ## [Task 6](/Task06/README.md): 코드 리팩토링, 보안 문제 확인
