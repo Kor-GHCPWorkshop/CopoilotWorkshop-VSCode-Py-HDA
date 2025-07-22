@@ -1,15 +1,15 @@
 # Task 5: 프롬프트와 컨텍스트 사용
 
 ## Use case: 
-- Prompt 파일에 대해 알아보고, 프롬프트 파일을 생성하여 테스트 코드 및 보안 점검에 활용해 봅니다. 
 - 효율적인 프롬프트 작성과 컨텍스트 활용 방법을 익힙니다. 
-- Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. 
+- Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. (Chat participant, Chat variable 등)
+- Prompt 파일에 대해 알아보고, 프롬프트 파일을 생성하여 테스트 코드 및 보안 점검에 활용해 봅니다. 
 - Copilot을 활용해 Commit message를 자동 생성합니다.
 
 ## 목표:
-- prompt 파일을 생성하여, 활용 방법을 실습합니다.
 - 효율적인 프롬프트 작성과 컨텍스트 활용을 통해 Copilot을 활용하는 방법을 익힙니다.
-- Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인합니다. 
+- Copilot Chat에 추가할 수 있는 다양한 컨텍스트들에 대해 확인하고, 활용해 봅니다.
+- prompt 파일을 생성하여, 활용 방법을 실습합니다.
 - Commit message 자동 생성 기능을 사용해 보고, Custom instruction을 제공하여, 원하는 형태로 commit message를 제안받아 봅니다.
 
 ## Step 1: GitHub Copilot Chat에서 지원하는 프롬프트 유형
