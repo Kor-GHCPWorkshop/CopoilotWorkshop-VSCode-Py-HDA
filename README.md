@@ -51,11 +51,8 @@
 
 ## [Task 6](/Task06/README.md): 코드 리팩토링, 보안 문제 확인
   - 주어진 코드 블럭을 Copilot을 활용하여 리팩토링 하거나, 보안 문제를 확인해 보는 실습 예제 입니다.
-  
-## [Task 7](/Task07/README.md): CI/CD 파이프라인 실습 
-  - 주어진 파이프라인에 대한 설명과 변환등을 GitHub Copilot을 사용하여 실습하는 예제입니다.
 
-## [Task 8](/Task08/README.md): MCP (Model Context Protocol) 활용 실습
+## [Task 7](/Task07/README.md): MCP (Model Context Protocol) 활용 실습
  - VS Code에서 Model Context Protocol 서버를 설정하고, 활용해 봅니다.
    
 
