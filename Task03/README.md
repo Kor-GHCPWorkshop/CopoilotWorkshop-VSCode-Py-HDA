@@ -22,7 +22,7 @@
  - **[Custom instructions란](https://code.visualstudio.com/docs/copilot/copilot-customization)** 
     - 일반적인 가이드라인이나 규칙을 정의하여 코드 생성, 코드 리뷰 수행, 또는 커밋 메시지 생성과 같은 작업을 수행합니다. Custom instructions는 AI가 작업을 수행해야 하는 조건(작업이 어떻게 수행되어야 하는지)을 설명합니다.
     - Custom instructions는 다양한 형태로 작성할 수 있습니다. <br>
-	- 아래 표는 Custom instructions를 작성할 수 있는 방법을 정리한 것입니다. <br>
+	- VS Code의 설정 메뉴에서 아래 3가지 설정을 통해, Custom instructions 파일을 지정할 수 있습니다. 아래 표는 Custom instructions를 작성할 수 있는 방법을 정리한 것입니다. <br>
 
     | Custom instructions 유형 | 설명 |
 	|-|-|
@@ -38,9 +38,40 @@
 	  - 예시로 제공된 파일을 참고하여, 프로젝트에 맞는 지침을 작성합니다.
       - [copilot-instructions예](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/custom-instructions/adding-repository-custom-instructions-for-github-copilot?tool=vscode#repository-custom-instructions-example) <br>
 
-	  - <참고> VS Code의 설정 메뉴에서 관련 설정 <br>
-          <img src="img/30.png" width="600"> <br>
-          <img src="img/31.png" width="800"><br>
+
+	````markdown
+	# Project Overview
+
+	This project is a web application that allows users to manage their tasks and to-do lists. It is built using React and Node.js, and uses MongoDB for data storage.
+
+	## Folder Structure
+
+	- `/src`: Contains the source code for the frontend.
+	- `/server`: Contains the source code for the Node.js backend.
+	- `/docs`: Contains documentation for the project, including API specifications and user guides.
+
+	## Libraries and Frameworks
+
+	- React and Tailwind CSS for the frontend.
+	- Node.js and Express for the backend.
+	- MongoDB for data storage.
+
+	## Coding Standards
+
+	- Use semicolons at the end of each statement.
+	- Use single quotes for strings.
+	- Use function based components in React.
+	- Use arrow functions for callbacks.
+
+	## UI guidelines
+
+	- A toggle is provided to switch between light and dark mode.
+	- Application should have a modern and clean design.
+	````
+
+	- <참고> VS Code의 설정 메뉴에서 관련 설정 <br>
+		<img src="img/30.png" width="600"> <br>
+		<img src="img/31.png" width="800"><br>
 
 	### 2-2. `.instructions.md` 파일 생성
       - 특정 작업에 대한 사용자 정의 지침을 저장하기 위해 하나 이상의 `.instructions.md` 파일을 생성할 수 있습니다. 예를 들어, 다양한 프로그래밍 언어, 프레임워크 또는 프로젝트 유형에 대한 지침 파일을 생성할 수 있습니다. VS Code는 모든 채팅 요청에 지침 파일을 자동으로 추가하거나, 특정 파일에 대해 지침이 자동으로 적용되도록 지정할 수 있습니다. 또는 채팅 프롬프트에 지침 파일을 수동으로 첨부할 수도 있습니다.
@@ -70,7 +101,6 @@
 		  <img src="img/32.png" width="600"> <br>
 
 	### 2-3. VS Code 설정 : settings.json
-	  - VS Code의 설정 메뉴에서 아래 3가지 설정을 통해, Custom instructions 파일을 지정할 수 있습니다. 
 	  - "text", 혹은 "file"을 지정할 수 있습니다. 
 
 	  - ** 이전 VS Code의 설정에서 `codeGeneration`과 `testGeneration` 설정을 VS Code 1.102 버전부터 deprecated 되었습니다. 
