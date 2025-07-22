@@ -139,22 +139,22 @@
 			"password": true
 			}
 		],
-		"servers": {
-			"github": {
-				"command": "docker",
-				"args": [
-				"run",
-				"-i",
-				"--rm",
-				"-e",
-				"GITHUB_PERSONAL_ACCESS_TOKEN",
-				"ghcr.io/github/github-mcp-server"
-				],
-				"env": {
-				"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
-				}
+	"servers": {
+		"github": {
+			"command": "docker",
+			"args": [
+			"run",
+			"-i",
+			"--rm",
+			"-e",
+			"GITHUB_PERSONAL_ACCESS_TOKEN",
+			"ghcr.io/github/github-mcp-server"
+			],
+			"env": {
+			"GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
 			}
 		}
+	}
 
 	```
  - 'start' 버튼을 클릭하여 MCP 서버를 시작합니다.
