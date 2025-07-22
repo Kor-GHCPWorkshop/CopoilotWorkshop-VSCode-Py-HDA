@@ -12,7 +12,7 @@
 
 ## Step 1: 새로운 프로젝트 시작하기
 - VS Code에서 새로운 프로젝트를 생성합니다.
-- 파일 - New window를 선택하고, 새로운 폴더를 선택하여 새 프로젝트를 시작합니다.
+- 파일 - New window를 선택하고, 새로운 폴더를 선택하여 새 프로젝트를 시작합니다. <br>
  <img src="img/01.png" width="400"> <br>
 
 ## Step 2: Custom instructions 생성
