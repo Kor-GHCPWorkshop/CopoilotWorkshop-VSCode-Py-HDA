@@ -96,7 +96,7 @@ GitHub Copilot Chat은 다양한 코딩 관련 프롬프트를 처리하여 대�
   <img src="img/11.png" width="400"> <br>
 
 - 마찬가지로, @githubpr 은 'GitHub Pull Requests' 확장 프로그램에서 제공하는 Chat participant입니다. 이 Chat participant는 GitHub Pull Requests와 관련된 작업을 수행할 수 있습니다.<br>
-  <img src="img/12.png" width="400"> <br>
+  <img src="img/12.png" width="700"> <br>
   <img src="img/13.png" width="400"> <br>
 
 ## Step 4: Copilot Chat에서 Chat participants와 슬래시 명령(/) 사용하기
