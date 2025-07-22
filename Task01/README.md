@@ -32,6 +32,7 @@
 **참고:** <br>
 - 제안되는 리스트 목록을 확인하는 Ctrl + Enter 키에 변경 내용이 있어, 이를 확인하려면 아래와 같이 진행합니다. <br>
 - 이렇듯, 버전 업데이트가 진행되면서, 메뉴의 위치나 기능에 변경이 발생 할 수 있습니다. <br>
+
 - 상단의 Copilot 아이콘을 클릭하고, `Configure Code completion`을 선택합니다.<br>
 <img src = "img/19.png" width = "300"> <br>
 - 'Open Completions Panel'을 선택합니다.<br>
@@ -43,7 +44,20 @@
 <img src = "img/23.png" width = "400"> <br> 
 <img src = "img/24.png" width = "400"> <br>
 
-## Step 2 : 오른 마우스 Copilot 메뉴 사용하기
+## Step 2 : Copilot Log 확인하기
+- VS Code 하단 터미널 창 부분의 `OUTPUT` 탭에서 `GitHub Copilot`, `GitHub Copilot Chat` 에서 Copilot 관련 로그를 확인할 수 있습니다.<br>
+  <img src = "img/25.png" width = "400"> <br>
+  <img src = "img/28.png" width = "600"> <br>
+
+- GitHub Copilot 혹은 GitHub Copilot Chat 을 선택해 로그를 확인합니다. <br>
+  <img src = "img/29.png" width = "400">
+  <img src = "img/30.png" width = "400">
+
+- 만약, 제안되는 코드에서 오픈소스와 매치되는 부분이 있다면, `GitHub Copilot Log(Code References)`에서 관련 로그를 볼 수 있습니다.  `// 소수 판별함수`'제안 받을 때, 이 부분에서 오픈소스의 레퍼런스 정보를 확인할 수 있습니다. <br>
+- 다만, 이것은 GitHub Copilot 관리자가 오픈소스 매치되는 코드를 제안받지 않겠다고 설정하면, 로그를 볼 수 없습니다. <br>
+  <img src = "img/15.png" width = "800"> <br>
+
+## Step 3 : 오른 마우스 Copilot 메뉴 사용하기
 - 마우스 오른 버튼을 클릭하여, 'Copilot' 메뉴의 'generate_test'를 선택합니다.<br>
     <img src = "img/06.png" width = "500">
 
@@ -52,7 +66,7 @@
     <img src = "img/08.png" width = "500">
 
 
-## Step 3 : 코드 완성 기능의 컨텍스트 이해하기
+## Step 4 : 코드 완성 기능의 컨텍스트 이해하기
 - Copilot은 코드 완성 기능을 제공하기 위해, **주석과 함수 이름을 기반으로** 컨텍스트를 이해합니다.<br>
 - 또한, 현재 작성중인 파일의 커서 위치의 **전,후 데이터**와, 이 데이터와 유사한 데이터를 **오픈되어져 있는 주변의 탭**에서 찾아 컨텍스트를 이해합니다. (**Neighboring Tab**) <br>
    - 코드 완성 기능에서의 Neighboring Tab 기법을 테스트하기 위해 아래 절차데로 실습합니다. 
@@ -64,7 +78,7 @@
      <img src = "img/18.png" width = "500">
 
 
-## Step 4 : VS Code의 Copilot 설정 메뉴
+## Step 5 : VS Code의 Copilot 설정 메뉴
 - VS Code에서 Ctrl + Shift + P를 눌러 명령 팔레트를 열고, 'preference'을 검색하여, `Preference: Open Settings (UI)`를 선택합니다.<br>
     <img src = "img/09.png" width = "500">
 - Copilot locale을 검색하고, 'ko'로 변경합니다.<br>
@@ -83,12 +97,6 @@
 
 - Reference : [VS Code Copilot settings reference 문서](https://code.visualstudio.com/docs/copilot/copilot-settings)
 
-## Step 5: Copilot Log 확인하기
-- VS Code 하단 터미널 창에서 `OUTPUT` 을 클릭합니다. <br>
-  <img src = "img/25.png" width = "400">
-- GitHub Copilot 혹은 GitHub Copilot Chat 을 선택해 로그를 확인합니다. <br>
-  <img src = "img/26.png" width = "400">
-  <img src = "img/27.png" width = "400">
 
 ## 참고 : Copilot 관련 기술 지원
 - [GitHub 도움말 : Troubleshoot GitHub Copilot 문서 참조](https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/troubleshoot)
